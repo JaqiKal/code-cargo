@@ -1,0 +1,6 @@
+# .gitattributes file for enforcing consistent line endings
+# - `* text=auto` ensures that text files are normalized to LF in the repository.
+# - Converts line endings to CRLF on checkout for Windows users.
+# - Converts CRLF back to LF on commit for consistent storage in Git.
+
+* text=auto  
