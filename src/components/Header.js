@@ -25,12 +25,15 @@ const Header = () => {
         {/* Logo and Name */}
         <div className="flex items-center space-x-3">
           {/* Logo */}
-
-          <a href="/code-cargo/" aria-label="Go to homepage">
+          <a
+            href="/code-cargo/"
+            aria-label="Go to homepage"
+            className="group" // Group for hover effects
+          >
             <img
               src={logo} // Use the imported logo
               alt="Logo"
-              className="h-14 w-14" // Adjust size as needed
+              className="rounded-full h-14 w-14 transform transition-transform duration-300 ease-in-out group-hover:animate-tilt" // Custom animation on hover
             />
           </a>
           {/* Visually hidden name */}
