@@ -1,9 +1,18 @@
-import React from 'react';
+import React from "react";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Portfolio from "./components/Portfolio";
 
-const App = () => { 
+const App = () => {
   return (
     <div>
-      <h1>Welcome to my personal portfolio site!</h1>
+      <Header />
+      <Hero />
+      <About />
+      <Portfolio />
+      <Contact />
     </div>
   );
 };
