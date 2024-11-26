@@ -26,7 +26,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           {/* Logo */}
 
-          <a href="/" aria-label="Go to homepage">
+          <a href="/code-cargo/" aria-label="Go to homepage">
             <img
               src={logo} // Use the imported logo
               alt="Logo"
