@@ -5,6 +5,8 @@
 <!-- markdownlint-enable MD036 -->
 This is my personal CV and portfolio website, built to showcase my skills, projects, and experience as a developer. The site is designed to be responsive, modern, and fast, utilizing technologies like React.js and TailwindCSS.
 
+Visit the [Live Site](https://jaqikal.github.io/code-cargo/)
+
 ## Features
 
 - Professional CV and bio.

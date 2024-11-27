@@ -23,7 +23,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl font-bold">Welcome to my Portfolio</h1>
         {/* Brief description */}
         <p className="mt-6 text-lg md:text-xl">
-          I'm a web developer building solutions with precision and passion.
+          I'm a junior web developer building solutions with precision and passion.
         </p>
         {/* CTA button */}
         <div className="flex-grow"></div>

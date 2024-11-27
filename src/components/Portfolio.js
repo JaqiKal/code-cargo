@@ -18,10 +18,7 @@ import pixavibeLogo from "../assets/logo-pixavibe.webp"; // Import the logo
 const Portfolio = () => {
   // Array of projects
   const projects = [
-    { title: "PP1", description: "A short description of the project.", link: "#" },
-    { title: "PP2", description: "A short description of the project.", link: "#" },
-    { title: "PP3", description: "A short description of the project.", link: "#" },
-    { title: "PP4", description: "A short description of the project.", link: "#" },
+  
     {
       title: "Pixavibe",
       description:
@@ -33,6 +30,10 @@ const Portfolio = () => {
         liveSite: "https://pixavibe-frontend-e53fa907f215.herokuapp.com/",
       },
     },
+    { title: "PP4", description: "A short description of the project.", link: "#" },
+    { title: "PP3", description: "A short description of the project.", link: "#" },
+    { title: "PP1", description: "A short description of the project.", link: "#" },
+    { title: "PP1", description: "A short description of the project.", link: "#" },
     { title: "Hackathon 1", description: "A short description of the project.", link: "#" },
     { title: "Hackathon 2", description: "A short description of the project.", link: "#" },
     { title: "Hackathon 3", description: "A short description of the project.", link: "#" },
