@@ -14,6 +14,7 @@
 
 import React from "react";
 
+
 const Portfolio = () => {
   // Array of projects
   const projects = [
@@ -22,9 +23,9 @@ const Portfolio = () => {
     { title: "PP3", description: "A short description of the project.", link: "#" },
     { title: "PP4", description: "A short description of the project.", link: "#" },
     { title: "PP5", description: "A short description of the project.", link: "#" },
-    { title: "Project A", description: "A short description of the project.", link: "#" },
-    { title: "Project B", description: "A short description of the project.", link: "#" },
-    { title: "Project C", description: "A short description of the project.", link: "#" },
+    { title: "Hackathon 1", description: "A short description of the project.", link: "#" },
+    { title: "Hackathon 2", description: "A short description of the project.", link: "#" },
+    { title: "Hackathon 3", description: "A short description of the project.", link: "#" },
   ];
 
   return (
@@ -33,21 +34,18 @@ const Portfolio = () => {
       <div className="container mx-auto">
         {/* Section title */}
         <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
-        {/* Project cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Responsive grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="p-4 border rounded-lg shadow-sm hover:shadow-md transition"
-            >
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-700">{project.description}</p>
-              <a
-                href={project.link}
-                className="text-blue-600 hover:underline mt-4 block"
-              >
-                View Project
-              </a>
+            <div key={index} className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              {/* Project cards */}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <a href={project.link} className="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700">
+                  View Project
+                </a>
+              </div>
             </div>
           ))}
         </div>
