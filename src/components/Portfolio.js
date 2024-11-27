@@ -49,32 +49,32 @@ const Portfolio = () => {
             <div
               key={index}
               className={`max-w-sm mx-auto border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${
-                project.title === "Pixavibe" ? "bg-[rgb(231,213,230)] border-transparent" : "bg-white border-gray-200"
+                project.title === "Pixavibe" ? "border-transparent" : "border-gray-200"
               }`}
             >
-              <div className="p-6">
+              {/* Title/Logo Section */}
+              <div
+                className={`p-4 ${
+                  project.title === "Pixavibe" ? "bg-[rgb(232,247,229)]" : "bg-gray-100"
+                }`}
+              >
                 {project.logo ? (
                   <img
                     src={project.logo}
                     alt={`${project.title} Logo`}
-                    className="mx-auto mb-4 max-h-16" // Style for logo size and alignment
+                    className="mx-auto max-h-16"
                   />
                 ) : (
-                  <h3
-                    className={`text-xl font-semibold mb-2 ${
-                      project.title === "Pixavibe" ? "text-[rgb(109,57,138)]" : "text-gray-800"
-                    }`}
-                  >
-                    {project.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
                 )}
-                <p
-                  className={`mb-4 ${
-                    project.title === "Pixavibe" ? "text-[rgb(109,57,138)]" : "text-gray-600"
-                  }`}
-                >
-                  {project.description}
-                </p>
+              </div>
+              {/* Content Section */}
+              <div
+                className={`p-6 ${
+                  project.title === "Pixavibe" ? "bg-[rgb(231,213,230)] text-[rgb(109,57,138)]" : "bg-white text-gray-600"
+                }`}
+              >
+                <p className="mb-4">{project.description}</p>
                 {project.links ? (
                   <div className="space-y-2">
                     <a
