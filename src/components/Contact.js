@@ -1,7 +1,7 @@
 /**
  * Contact Component
  *
- * This component provides a contact form and a button to download your resume.
+ * This component provides a contact form and a button to download my resume.
  *
  * Features:
  * - Input fields for name, email, and message.

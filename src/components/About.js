@@ -1,7 +1,7 @@
 /**
  * About Component
  * 
- * This component provides a brief bio and list of key skils.
+ * This component provides a brief bio and list of key skills.
  * 
  * Features:
  * - Section header
