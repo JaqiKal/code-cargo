@@ -17,7 +17,9 @@ import React from 'react'
 const Hero = () => {
   return (
     // Full height section with a dark background
-    <section id="hero" className="bg-gray-900 text-white h-screen flex flex-col items-center justify-center">
+    <section
+  id="hero" className="h-screen bg-gradient-hero bg-no-repeat bg-cover text-white flex flex-col items-center justify-center"
+>
       <div className="text-center">
         {/* Main tagline */}
         <h1 className="text-4xl md:text-6xl font-bold">Welcome to my Portfolio</h1>
@@ -28,7 +30,7 @@ const Hero = () => {
         {/* CTA button */}
         <div className="flex-grow"></div>
         <a href="#portfolio"
-        className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+        className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 hover:scale-105 transform transition-transform" >
           View my work
           </a>
       </div>

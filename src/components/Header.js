@@ -20,7 +20,7 @@ import logo from "../assets/logo.webp";
 const Header = () => {
   return (
     // Fixed header with background and padding
-    <header className="bg-gray-900 text-white p-4 sticky top-0 z-50">
+    <header className="bg-transparent text-white p-4 sticky top-0 z-50 shadow-custom-colored backdrop-blur-sm shadow-[0px_0px_8px_rgba(250,2455,255,0.1)]">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo and Name */}
         <div className="flex items-center space-x-3">
