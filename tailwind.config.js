@@ -5,10 +5,14 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // React components
     "./public/**/*.html"          // HTML files in the public folder
+    
   ],
   theme: {
     extend: {
       colors: {},
+      backgroundImage: {
+        'bg-gradient-hero':'radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)',
+      },
       animation: {
         'tilt': 'tilt 0.5s ease-in-out infinite', // Custom animation for tilting
       },

@@ -14,3 +14,14 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .bg-gradient-hero {
+    background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  } /* Required as the gradient isn't generated properly via tailwind.config.js */
+}
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
