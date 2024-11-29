@@ -1,0 +1,65 @@
+.metallic-btn {
+  text-decoration: none; 
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.0rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  color: black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 2rem;
+  
+}
+
+.metallic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.metallic-btn .metallic-shine {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 75%);
+  opacity: 0;
+  transform: translateX(-100%) rotate(25deg);
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+.metallic-btn:hover .metallic-shine {
+  opacity: 1;
+  transform: translateX(200%) rotate(25deg);
+}
+
+.metallic-btn .metallic-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient Variants */
+.bg-silver-gradient {
+  background: linear-gradient(135deg, #bfc1c2 0%, #e7e9ec 25%, #f7f7f8 50%, #e7e9ec 75%, #bfc1c2 100%);
+}
+
+.bg-green-gradient {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 25%, #81c784 50%, #66bb6a 75%, #4caf50 100%);
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(135deg, #2196f3 0%, #42a5f5 25%, #64b5f6 50%, #42a5f5 75%, #2196f3 100%);
+}
+
+.bg-purple-gradient {
+  background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 25%, #e1bee7 50%,#ba68c8 75%, #9c27b0 100%);
+}
