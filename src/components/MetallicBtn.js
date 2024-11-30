@@ -3,6 +3,8 @@
  *
  * This component provides a reusable button with metallic gradients and a shine effect.
  * It can be rendered as either a button or a link depending on the provided props.
+ * Thank you CSS Tutorial Metallic Design for the 
+ * inspiration: https://www.youtube.com/watch?v=Jq-1priN4OQ
  *
  * Features:
  * - Customizable gradients and labels.

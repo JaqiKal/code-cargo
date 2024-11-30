@@ -81,13 +81,13 @@ const Portfolio = () => {
                     />
                     <MetallicButton
                       label="Frontend"
-                      gradientClass="bg-green-gradient"
+                      gradientClass="bg-steelgreen-gradient"
                       link={project.links.frontend}
                       customClass="w-full h-12"
                     />
                     <MetallicButton
                       label="Live Site"
-                      gradientClass="bg-purple-gradient"
+                      gradientClass="bg-mauve-gradient"
                       link={project.links.liveSite}
                       customClass="w-full h-12"
                     />
@@ -96,8 +96,8 @@ const Portfolio = () => {
                     
                   <MetallicButton
                     label="View Project"
-                    gradientClass="bg-blue-gradient"
-                    customClass="w-full h-12"
+                    gradientClass="bg-purple-gradient"
+                    customClass="w-1/2 h-12 mx-auto"
                   />
                 )}
               </div>
