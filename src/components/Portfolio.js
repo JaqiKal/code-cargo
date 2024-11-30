@@ -174,7 +174,7 @@ const Portfolio = () => {
                       fontFamily: "'Mochiy Pop P One', sans-serif",
                     }}
                   >
-                    "Classical Music Month Hackathon"
+                    Classical Music Month Hackathon"
                   </h3>
                 ) : project.title === "Gratidudes" ? (
                   <h3
