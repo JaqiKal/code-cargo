@@ -72,28 +72,32 @@ const Portfolio = () => {
               >
                 <p className="mb-4">{project.description}</p>
                 {project.links ? (
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 space-y-2 space-x-2">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-4">
                     <MetallicButton
                       label="Backend"
                       gradientClass="bg-silver-gradient"
                       link={project.links.backend}
+                      customClass="w-full h-12"
                     />
                     <MetallicButton
                       label="Frontend"
                       gradientClass="bg-green-gradient"
                       link={project.links.frontend}
+                      customClass="w-full h-12"
                     />
                     <MetallicButton
                       label="Live Site"
-                      gradientClass="bg-blue-gradient"
+                      gradientClass="bg-purple-gradient"
                       link={project.links.liveSite}
+                      customClass="w-full h-12"
                     />
                   </div>
                 ) : (
                     
                   <MetallicButton
                     label="View Project"
-                    gradientClass="bg-purple-gradient"
+                    gradientClass="bg-blue-gradient"
+                    customClass="w-full h-12"
                   />
                 )}
               </div>
