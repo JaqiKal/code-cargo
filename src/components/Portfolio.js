@@ -76,7 +76,7 @@ const Portfolio = () => {
     {
       title: "Classical Music Month Hackathon - Music Non Stop",
       description:
-        "Music Non Stop is a classical music-themed memory card game. Designed to enhance your memory while appreciating classical music.",
+        "Music Non Stop is a card game that trains your brain to improve your memory while bringing the beauty of classical music to your ears. Designed for music lovers of all ages, this game challenges players to match pairs of cards that play the same classical tune. There are 12 cards featuring 6 unique pairs. For each successful match, a bonus trivia question will pop up with multiple answer options. You can choose to answer the question for bonus points, or skip it and continue with the memory card game. The game is over when all pairs are matched. The player with the highest score wins. Music Non Stop is a fun and educational way to enjoy classical music while sharpening your memory skills. Play now and let the music take you on a journey of discovery and delight.",
       logo: "#", 
       links: {
         backend: "#",
@@ -87,7 +87,7 @@ const Portfolio = () => {
     {
       title: "World Happiness Day Hackathon - Gratidudes",
       description:
-        "This online platform invites users to anonymously express thanks, uplifting stories, and moments of joy.",
+        "The Gratitude Wall celebrates World Happiness Day by creating a space for sharing gratitude. This online platform invites users to anonymously express thanks, uplifting stories, and moments of joy. Our mission is to build a community rooted in gratitude, transforming individual moments of appreciation into a global movement of collective joy. Central to our mission are user-centric designs that facilitate an intuitive and rewarding experience, making every visit a step towards spreading positivity. 'Gratitude Wall' isn't just a site; it's a movement towards acknowledging the beauty in life's small moments and the transformative power of gratitude in building a happier world. Join us in embracing the power of gratitude. Together, we can make a difference, one thank-you at a time.",
       logo: "#", 
       links: {
         backend: "#",
