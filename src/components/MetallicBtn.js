@@ -39,13 +39,16 @@ const MetallicButton = ({ label, gradientClass, link, customClass }) => {
     >
       {/* Shine Effect */}
       <span className="metallic-shine"></span>
+
       {/* Button Label */}
       <span className="metallic-text">{label}</span>
     </a>
   ) : (
     <button className={`metallic-btn ${gradientClass} ${customClass}`}>
+
       {/* Shine Effect */}
       <span className="metallic-shine"></span>
+      
       {/* Button Label */}
       <span className="metallic-text">{label}</span>
     </button>
