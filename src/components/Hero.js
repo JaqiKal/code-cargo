@@ -36,7 +36,7 @@ const Hero = () => {
         type: "circle", 
       },
       opacity: {
-        value: 0.3, // Base opacity of particles
+        value: 0.5, // Base opacity of particles
       },
       size: {
         value: { min: 100, max: 400 },  // Base size of particles
@@ -47,7 +47,7 @@ const Hero = () => {
       },
       move: {
         enable: true, 
-        speed: 3, // Speed of particles
+        speed: 2.5, // Speed of particles
         direction: "top-right", // Direction of movement
         outModes: {
           default: "out", // Particles disappear when they leave the canvas
