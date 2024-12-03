@@ -30,16 +30,16 @@ const Hero = () => {
     fullScreen: { enable: false }, // Disables fullscreen to confine particles to the Hero section
     particles: {
       number: {
-        value: 50, // Total number of particles on the screen
+        value: 33, // Total number of particles on the screen
       },
       shape: {
         type: "circle", 
       },
       opacity: {
-        value: 0.5, // Base opacity of particles
+        value: 0.3, // Base opacity of particles
       },
       size: {
-        value: 400, // Base size of particles
+        value: { min: 100, max: 400 },  // Base size of particles
         random: {
           enable: true, // Enables random sizing
           minimumValue: 200, // Sets a minimum size for randomness
@@ -47,8 +47,8 @@ const Hero = () => {
       },
       move: {
         enable: true, 
-        speed: 2, 
-        direction: "top", 
+        speed: 3, // Speed of particles
+        direction: "top-right", // Direction of movement
         outModes: {
           default: "out", // Particles disappear when they leave the canvas
           top: "destroy", // Particles are removed as they reach the top
@@ -106,12 +106,12 @@ const Hero = () => {
     emitters: {
       direction: "diagonal", // Emitter shoots particles in set direction
       position: {
-        x: 50, // Position on the X-axis (slightly off-center)
+        x: 35, // Position on the X-axis (slightly off-center)
         y: 150, // Position on the Y-axis
       },
       rate: {
-        delay: 0.1, // Delay between emissions
-        quantity: 7 // Number of particles emitted at once
+        delay: 0.2, // Delay between emissions
+        quantity: 5 // Number of particles emitted at once
       },
       size: {
         width: 100, // Emitter width
@@ -130,13 +130,13 @@ const Hero = () => {
       />
       {/* Hero Content */}
       <div className="relative text-center z-10">
-        <h1 className="text-4xl md:text-6xl font-bold text-fuchsia-800">Welcome to my Portfolio</h1>
-        <p className="mt-6 text-lg md:text-xl  text-fuchsia-800">
+        <h1 className="text-4xl md:text-6xl font-bold text-fuchsia-900">Welcome to my Portfolio</h1>
+        <p className="mt-6 text-lg md:text-xl  text-fuchsia-900">
           I'm a junior web developer building solutions with precision and passion.
         </p>
         <a
           href="#portfolio" // Links to the portfolio section
-          className="mt-6 inline-block px-6 py-3 bg-purple-gradient text-purple-950 rounded-md hover:bg-fuchsia-800 hover:scale-105 transform transition-transform"
+          className="mt-6 inline-block px-6 py-3 bg-purple-gradient font-semibold text-purple-950 rounded-md hover:scale-105 transform transition-transform  hover:bg-fuchsia-800"
         >
           View my work
         </a>
