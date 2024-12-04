@@ -26,11 +26,11 @@ const Hero = () => {
 
   // Configuration for the particle effect
   const particlesOptions = {
-    fpsLimit: 60, // Limits the frame rate for performance
+    fpsLimit: 120, // Limits the frame rate for performance
     fullScreen: { enable: false }, // Disables fullscreen to confine particles to the Hero section
     particles: {
       number: {
-        value: 33, // Total number of particles on the screen
+        value: 3, // Total number of particles on the screen
       },
       shape: {
         type: "circle", 
@@ -39,7 +39,7 @@ const Hero = () => {
         value: 0.5, // Base opacity of particles
       },
       size: {
-        value: { min: 100, max: 400 },  // Base size of particles
+        value: { min: 20, max: 200 },  // Base size of particles
         random: {
           enable: true, // Enables random sizing
           minimumValue: 200, // Sets a minimum size for randomness
@@ -80,7 +80,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#9FE2BF", "#FFF0F5"], // Pastel palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#9FE2BF", "#FFF0F5", "#10011d"], // Pastel palette for particles 
             },
           },
         },
@@ -97,7 +97,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#9FE2BF", "#FFF0F5"], // Same palette, ensuring consistent design
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#9FE2BF", "#FFF0F5", "#10011d"], // Same palette, ensuring consistent design
             },
           },
         },
