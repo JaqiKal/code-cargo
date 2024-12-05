@@ -18,7 +18,8 @@
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import "../styles/GlassPane.css";
+import styles from "./../styles/Hero.module.css";
+
 
 const Hero = () => {
   // Initialize the particles engine. This ensures all plugins are loaded.
@@ -133,8 +134,7 @@ const Hero = () => {
 
       {/* Hero content with glass pane */}
       <div className="relative text-center z-10">
-        {/* Glass pane wrapping content */}
-        <div className="bg-glasspane p-6 rounded-md inline-block">
+        <div className={styles.glassPane}>
           <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">Welcome to my Portfolio</h1>
           <p className="mt-6 text-lg md:text-xl text-heroTextcolor">I'm a junior web developer building solutions with precision and passion.</p>
           <a href="#portfolio" className="mt-6 inline-block px-6 py-3 bg-purple-gradient font-semibold text-heroTextcolor rounded-md hover:scale-105 transform transition-transform hover:bg-fuchsia-800">
