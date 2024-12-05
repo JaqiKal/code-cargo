@@ -125,23 +125,24 @@ const Hero = ({ playAnimation }) => {
   };
 
   return (
-    <section className="h-screen relative bg-gradient-hero flex items-center justify-center" id="hero-section">
-      <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
-      <div className={`relative text-center z-10 ${playAnimation ? styles["hero-flip-animation"] : ""}`}>
-        <div className={styles.glassPane}>
-          <h1 className="text-3xl md:text-5xl font-medium text-heroTextcolor">Welcome to my Portfolio</h1>
-          <p className="mt-6 text-lg md:text-xl font- text-heroTextcolor">
-            I'm a junior web developer building solutions with precision and passion.
+  
+  <section className="h-screen flex items-center justify-center bg-gradient-hero" id="hero-section">
+    <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+    <div className={`relative text-center z-10 ${playAnimation ? styles["hero-flip-animation"] : ""}`}>
+      <div className={styles.glassPane}>
+        <h1 className="text-3xl md:text-5xl font-medium text-heroTextcolor">Welcome to my Portfolio</h1>
+        <p className="mt-6 text-lg md:text-xl text-heroTextcolor">
+          I'm a junior web developer building solutions with precision and passion.
           </p>
           <MetallicButton
-            label="View My Work"
-            link="#portfolio"
-            gradientClass="bg-purple-gradient"
-            customClass={`mt-6 text-heroTextcolor ${styles["hero-cta"]}`}
+          label="View My Work"
+          link="#portfolio"
+          gradientClass="bg-purple-gradient"
+          customClass={`mt-6 text-heroTextcolor ${styles["hero-cta"]}`}
           />
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
