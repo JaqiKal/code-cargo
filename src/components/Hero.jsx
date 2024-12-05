@@ -34,7 +34,7 @@ const Hero = () => {
     fullScreen: { enable: false }, // Disables fullscreen to confine particles to the Hero section
     particles: {
       number: {
-        value: 200, // Total number of particles on the screen
+        value: 100, // Total number of particles on the screen
       },
       shape: {
         type: "circle", // Shape of particles
@@ -55,7 +55,7 @@ const Hero = () => {
         direction: "none", // Direction of movement
         outModes: {
           default: "out", // Particles disappear when they leave the canvas
-          top: "bounce", // Particles are removed as they reach the top
+          top: "bounce", // Particles bounce off the top
           bottom: "none", // Particles are removed as they reach the bottom
         },
       },
@@ -99,7 +99,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // , Palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d" ], // , #FFF0F5", "#9FE2BF"Palette for particles
             },
           },
         },
@@ -116,7 +116,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // Palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], // #FFF0F5" "#9FE2BF" Palette for particles
             },
           },
         },
