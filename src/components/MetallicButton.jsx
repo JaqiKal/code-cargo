@@ -26,12 +26,15 @@
  */
 
 import React from "react";
-import "../styles/MetallicBtn.css";
+import styles from "../styles/MetallicButton.module.css";
 
-const MetallicButton = ({ label = "Click Me", gradientClass = "bg-gradient-to-r from-blue-400 to-blue-600", link = "#", customClass = "" }) => {
-  // If a link is provided, render the button inside an <a> tag
+
+const MetallicButton = ({ label = "Click Me", gradientClass = "", link = "#", customClass = "" }) => {
+  const gradientClassName = styles[gradientClass] || gradientClass; // Use styles for CSS Modules
+
+
   return link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer" className={`metallic-btn ${gradientClass} ${customClass}`}>
+    <a href={link} target="_blank" rel="noopener noreferrer" className={`${styles["metallic-btn"]} ${gradientClassName} ${customClass}`}>
       {/* Shine Effect */}
       <span className="metallic-shine"></span>
 
@@ -39,7 +42,7 @@ const MetallicButton = ({ label = "Click Me", gradientClass = "bg-gradient-to-r 
       <span className="metallic-text">{label}</span>
     </a>
   ) : (
-    <button className={`metallic-btn ${gradientClass} ${customClass}`}>
+    <button className={`${styles["metallic-btn"]} ${gradientClassName} ${customClass}`}>
       {/* Shine Effect */}
       <span className="metallic-shine"></span>
 

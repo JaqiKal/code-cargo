@@ -62,3 +62,13 @@
 .bg-mauve-gradient {
   background: linear-gradient(135deg, #9e7d8c 0%, #b898a4 25%, #805e6e 50%, #b898a4 75%, #9e7d8c 100%);
 }
+
+.hero-cta {
+  max-width: 16rem; /* Maximum width */
+  width: 100%; /* Stretch to fill available space */
+}
+@media (min-width: 768px) {
+  .hero-cta {
+    max-width: 2rem; /* Adjust width for larger viewports */
+  }
+}

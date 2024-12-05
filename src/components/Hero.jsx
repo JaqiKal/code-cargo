@@ -19,6 +19,7 @@ import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import styles from "./../styles/Hero.module.css";
+import MetallicButton from "../components/MetallicButton";
 
 
 const Hero = () => {
@@ -137,9 +138,13 @@ const Hero = () => {
         <div className={styles.glassPane}>
           <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">Welcome to my Portfolio</h1>
           <p className="mt-6 text-lg md:text-xl text-heroTextcolor">I'm a junior web developer building solutions with precision and passion.</p>
-          <a href="#portfolio" className="mt-6 inline-block px-6 py-3 bg-purple-gradient font-semibold text-heroTextcolor rounded-md hover:scale-105 transform transition-transform hover:bg-fuchsia-800">
-            View my work
-          </a>
+          {/* CTA Button */}
+          <MetallicButton
+          label="view my work"
+          link="#portfolio"
+          gradientClass="bg-purple-gradient"
+          customClass={`mt-6 text-heroTextcolor ${styles["hero-cta"]}`}
+          />
         </div>
       </div>
     </section>

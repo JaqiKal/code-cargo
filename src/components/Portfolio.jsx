@@ -14,7 +14,7 @@
 
 import React from "react";
 import pixavibeLogo from "../assets/logo-pixavibe.webp"; // Import the logo
-import MetallicButton from "./MetallicBtn"; // Import the MetallicButton
+import MetallicButton from "./MetallicButton"; // Import the MetallicButton
 
 const Portfolio = () => {
   const projects = [

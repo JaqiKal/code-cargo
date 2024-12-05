@@ -1,28 +1,35 @@
 .glassPane {
-    position: relative;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    border-radius: 1rem;
-    z-index: 1;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.hero-cta {
+  max-width: 10rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .glassPane {
+    margin: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(15px);
   }
-  
-  @media (max-width: 768px) {
-    .glassPane {
-      margin: 1rem;
-      padding: 1.5rem;
-      backdrop-filter: blur(15px);
-    }
+}
+
+@media (max-width: 480px) {
+  .glassPane {
+    margin: 1rem;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
   }
-  
-  @media (max-width: 480px) {
-    .glassPane {
-      margin: 1rem;
-      padding: 1rem;
-      backdrop-filter: blur(10px);
-      border-radius: 0.5rem;
-    }
-  }
-  
+}
