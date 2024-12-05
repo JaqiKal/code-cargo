@@ -18,7 +18,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.webp";
 
-const Header = () => {
+const Header = ({ onLogoClick }) => {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -44,12 +44,17 @@ const Header = () => {
     <header
       className={`${
         showNav ? "translate-y-0" : "-translate-y-full"
-      } bg-transparent text-white p-4 sticky top-0 z-50 shadow-custom-colored backdrop-blur-sm shadow-[0px_0px_8px_rgba(250,2455,255,0.1)] transition-transform duration-300`}
+      } bg-transparent text-white p-4 sticky top-0 z-50 shadow-custom-colored backdrop-blur-sm transition-transform duration-300`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <a
-            href="/code-cargo/"
+            href="/"
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default link action
+              onLogoClick(); // Disable animation
+              document.getElementById("hero-section").scrollIntoView({ behavior: "smooth" }); // Scroll to hero
+            }}
             aria-label="Go to homepage"
             className="group"
           >
@@ -69,7 +74,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="#portfolio" className=" font-semibold text-fuchsia-800 hover:text-purple-300">
+              <a href="#portfolio" className="font-semibold text-fuchsia-800 hover:text-purple-300">
                 Portfolio
               </a>
             </li>

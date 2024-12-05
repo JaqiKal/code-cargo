@@ -5,39 +5,27 @@
  *
  * Features:
  * - Animated particle effect scoped to this section.
- *   Amended from https://codepen.io/matteobruni/pen/qBPxjQY
- *   for properties and config.: https://particles.js.org/docs/index.html
  * - Large text for tagline.
  * - CTA button linking to the portfolio section.
  * - Centered layout optimized for both mobile and desktop view.
+ * - Animated CTA container.
+ * - Animation controlled by parent (`playAnimation` prop).
+ * - No internal state for animation.
  *
  * Author: JaqiKal
  * Date: Dec 2024
  */
 
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import styles from "./../styles/Hero.module.css";
 import MetallicButton from "../components/MetallicButton";
 
-const Hero = () => {
-  const [isFirstLoad, setIsFirstLoad] = useState(true); // State to track the first load
-
-  // Initialize the particles engine. This ensures all plugins are loaded.
+const Hero = ({ playAnimation }) => {
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine); // Dynamically loads the full tsParticles engine with plugins
+    await loadFull(engine);
   }, []);
-
-  // Remove the animation class after the first load
-  useEffect(() => {
-    if (isFirstLoad) {
-      const timer = setTimeout(() => {
-        setIsFirstLoad(false);
-      }, 10000); // Matchar varaktigheten för animationen
-      return () => clearTimeout(timer);
-    }
-  }, [isFirstLoad]);
 
   // Configuration for the particle effect
   const particlesOptions = {
@@ -110,7 +98,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], // , #FFF0F5", "#9FE2BF"Palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], //  TODO "#FFF0F5", "#9FE2BF"Palette for particles
             },
           },
         },
@@ -127,7 +115,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], // #FFF0F5" "#9FE2BF" Palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], // TODO "#FFF0F5" "#9FE2BF" Palette for particles
             },
           },
         },
@@ -136,24 +124,11 @@ const Hero = () => {
   };
 
   return (
-    <section className="h-screen relative bg-gradient-hero flex items-center justify-center">
-      {/* Particles Effect */}
-      <Particles
-        id="tsparticles"
-        init={particlesInit} // Initializes the particles engine
-        options={particlesOptions} // Passes the configuration for the particles
-      />
-
-      {/* Hero content with glass pane */}
-      <div
-        className={`relative text-center z-10 ${
-          isFirstLoad ? styles["hero-flip-animation"] : ""
-        }`}
-      >
+    <section className="h-screen relative bg-gradient-hero flex items-center justify-center" id="hero-section">
+      <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+      <div className={`relative text-center z-10 ${playAnimation ? styles["hero-flip-animation"] : ""}`}>
         <div className={styles.glassPane}>
-          <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">
-            Welcome to my Portfolio
-          </h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">Welcome to my Portfolio</h1>
           <p className="mt-6 text-lg md:text-xl text-heroTextcolor">
             I'm a junior web developer building solutions with precision and passion.
           </p>
