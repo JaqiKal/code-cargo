@@ -18,6 +18,30 @@
   --color-primary: #f9a826; /* Primary color *
 }
 */
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width for vertical scrollbar */
+  height: 8px; /* Set the height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Track background */
+  border-radius: 10px; /* Rounded edges for track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #86198f; /* Thumb color */
+  border-radius: 10px; /* Rounded edges for thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #86198f; /* Thumb color on hover */
+}
+
+html {
+  scrollbar-width: thin; /* For Firefox, reduces scrollbar width */
+  scrollbar-color: #86198f rgba(255, 255, 255, 0.1); /* Thumb and track colors for Firefox */
+}
 
 body {
   margin: 0;
