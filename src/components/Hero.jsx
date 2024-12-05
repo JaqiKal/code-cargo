@@ -129,8 +129,8 @@ const Hero = ({ playAnimation }) => {
       <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
       <div className={`relative text-center z-10 ${playAnimation ? styles["hero-flip-animation"] : ""}`}>
         <div className={styles.glassPane}>
-          <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">Welcome to my Portfolio</h1>
-          <p className="mt-6 text-lg md:text-xl text-heroTextcolor">
+          <h1 className="text-3xl md:text-5xl font-medium text-heroTextcolor">Welcome to my Portfolio</h1>
+          <p className="mt-6 text-lg md:text-xl font- text-heroTextcolor">
             I'm a junior web developer building solutions with precision and passion.
           </p>
           <MetallicButton

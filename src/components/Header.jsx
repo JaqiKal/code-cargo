@@ -70,17 +70,17 @@ const Header = ({ onLogoClick }) => {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <a href="#about" className="font-semibold text-fuchsia-800 hover:text-purple-300">
+              <a href="#about" className="font-concert p-2 text-fuchsia-800 hover:text-purple-300">
                 About
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="font-semibold text-fuchsia-800 hover:text-purple-300">
+              <a href="#portfolio" className="font-concert p-2 text-fuchsia-800 hover:text-purple-300">
                 Portfolio
               </a>
             </li>
             <li>
-              <a href="#contact" className="font-semibold text-fuchsia-800 hover:text-purple-300">
+              <a href="#contact" className="font-concert p-2 text-fuchsia-800 hover:text-purple-300">
                 Contact
               </a>
             </li>
