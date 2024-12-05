@@ -15,18 +15,29 @@
  * Date: Dec 2024
  */
 
-import React, { useCallback } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import styles from "./../styles/Hero.module.css";
 import MetallicButton from "../components/MetallicButton";
 
-
 const Hero = () => {
+  const [isFirstLoad, setIsFirstLoad] = useState(true); // State to track the first load
+
   // Initialize the particles engine. This ensures all plugins are loaded.
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine); // Dynamically loads the full tsParticles engine with plugins
   }, []);
+
+  // Remove the animation class after the first load
+  useEffect(() => {
+    if (isFirstLoad) {
+      const timer = setTimeout(() => {
+        setIsFirstLoad(false);
+      }, 10000); // Matchar varaktigheten för animationen
+      return () => clearTimeout(timer);
+    }
+  }, [isFirstLoad]);
 
   // Configuration for the particle effect
   const particlesOptions = {
@@ -99,7 +110,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d" ], // , #FFF0F5", "#9FE2BF"Palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], // , #FFF0F5", "#9FE2BF"Palette for particles
             },
           },
         },
@@ -134,16 +145,23 @@ const Hero = () => {
       />
 
       {/* Hero content with glass pane */}
-      <div className="relative text-center z-10">
+      <div
+        className={`relative text-center z-10 ${
+          isFirstLoad ? styles["hero-flip-animation"] : ""
+        }`}
+      >
         <div className={styles.glassPane}>
-          <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">Welcome to my Portfolio</h1>
-          <p className="mt-6 text-lg md:text-xl text-heroTextcolor">I'm a junior web developer building solutions with precision and passion.</p>
-          {/* CTA Button */}
+          <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">
+            Welcome to my Portfolio
+          </h1>
+          <p className="mt-6 text-lg md:text-xl text-heroTextcolor">
+            I'm a junior web developer building solutions with precision and passion.
+          </p>
           <MetallicButton
-          label="view my work"
-          link="#portfolio"
-          gradientClass="bg-purple-gradient"
-          customClass={`mt-6 text-heroTextcolor ${styles["hero-cta"]}`}
+            label="View My Work"
+            link="#portfolio"
+            gradientClass="bg-purple-gradient"
+            customClass={`mt-6 text-heroTextcolor ${styles["hero-cta"]}`}
           />
         </div>
       </div>
