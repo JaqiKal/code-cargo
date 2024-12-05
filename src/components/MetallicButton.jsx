@@ -27,9 +27,10 @@ import styles from "../styles/MetallicButton.module.css";
 const MetallicButton = ({ label = "Click Me", gradientClass = "", link = "#", customClass = "" }) => {
   const gradientClassName = styles[gradientClass] || gradientClass; // Use styles for CSS Modules
 
-
   return link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer" className={`${styles["metallic-btn"]} ${gradientClassName} ${customClass}`}>
+    // Render as a link if 'link' prop is provided
+    <a href={link} target="_self" className={`${styles["metallic-btn"]} ${gradientClassName} ${customClass}`}>
+
       {/* Shine Effect */}
       <span className="metallic-shine"></span>
 
@@ -37,6 +38,7 @@ const MetallicButton = ({ label = "Click Me", gradientClass = "", link = "#", cu
       <span className="metallic-text">{label}</span>
     </a>
   ) : (
+    // Render as a button if 'link' prop is not provided
     <button className={`${styles["metallic-btn"]} ${gradientClassName} ${customClass}`}>
       {/* Shine Effect */}
       <span className="metallic-shine"></span>
