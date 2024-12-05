@@ -18,6 +18,7 @@
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import "../styles/GlassPane.css";
 
 const Hero = () => {
   // Initialize the particles engine. This ensures all plugins are loaded.
@@ -44,7 +45,6 @@ const Hero = () => {
         value: { min: 10, max: 150 }, // Base size of particles
         random: {
           enable: true, // Enables random sizing
-         
         },
       },
       move: {
@@ -79,7 +79,7 @@ const Hero = () => {
       },
       size: {
         width: 25, // Emitter width
-        height: 10, // Flat emitter (no height)
+        height: 0, // Flat emitter (no height)
       },
     },
     detectRetina: true, // Optimizes for retina screens
@@ -97,7 +97,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // , Pastel palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // , Palette for particles
             },
           },
         },
@@ -114,7 +114,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // Same palette, ensuring consistent design
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // Palette for particles
             },
           },
         },
@@ -130,16 +130,17 @@ const Hero = () => {
         init={particlesInit} // Initializes the particles engine
         options={particlesOptions} // Passes the configuration for the particles
       />
-      {/* Hero Content */}
+
+      {/* Hero content with glass pane */}
       <div className="relative text-center z-10">
-        <h1 className="text-4xl md:text-6xl font-bold text-fuchsia-900">Welcome to my Portfolio</h1>
-        <p className="mt-6 text-lg md:text-xl  text-fuchsia-900">I'm a junior web developer building solutions with precision and passion.</p>
-        <a
-          href="#portfolio" // Links to the portfolio section
-          className="mt-6 inline-block px-6 py-3 bg-purple-gradient font-semibold text-purple-950 rounded-md hover:scale-105 transform transition-transform  hover:bg-fuchsia-800"
-        >
-          View my work
-        </a>
+        {/* Glass pane wrapping content */}
+        <div className="bg-glasspane p-6 rounded-md inline-block">
+          <h1 className="text-3xl md:text-5xl font-bold text-heroTextcolor">Welcome to my Portfolio</h1>
+          <p className="mt-6 text-lg md:text-xl text-heroTextcolor">I'm a junior web developer building solutions with precision and passion.</p>
+          <a href="#portfolio" className="mt-6 inline-block px-6 py-3 bg-purple-gradient font-semibold text-heroTextcolor rounded-md hover:scale-105 transform transition-transform hover:bg-fuchsia-800">
+            View my work
+          </a>
+        </div>
       </div>
     </section>
   );

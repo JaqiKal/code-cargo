@@ -1,0 +1,29 @@
+.bg-glasspane {
+    position: relative; /* Relative to its content */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for the glass effect */
+    backdrop-filter: blur(30px); /* Frosted glass blur */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Depth shadow */
+    padding: 2rem; /* Space inside the pane */
+    border-radius: 1rem; /* Rounded corners for a pane-like look */
+    z-index: 1; /* Behind the hero text but above particles */
+  }
+
+
+  @media (max-width: 768px) {
+    .bg-glasspane {
+        margin: 1rem; /* Add margin for smaller screens */
+
+      padding: 1.5rem;
+      backdrop-filter: blur(15px); /* Slightly reduce blur */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bg-glasspane {
+        margin: 1rem; /* Add margin for smaller screens */
+      padding: 1rem;
+      backdrop-filter: blur(10px); /* Further reduce blur for smaller screens */
+      border-radius: 0.5rem; /* Less rounded for smaller devices */
+    }
+  }

@@ -9,7 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        heroTextcolor: '#10011d', // Dark purple for hero paragraph
+      },
       backgroundImage: {
         'bg-gradient-hero':'radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)',
       },
