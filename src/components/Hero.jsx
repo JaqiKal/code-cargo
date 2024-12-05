@@ -1,15 +1,16 @@
 /**
  * Hero Component
- * 
+ *
  * This component serves as the introductory section of the portfolio.
- * 
+ *
  * Features:
- * - Animated particle effect scoped to this section. 
+ * - Animated particle effect scoped to this section.
  *   Amended from https://codepen.io/matteobruni/pen/qBPxjQY
+ *   for properties and config.: https://particles.js.org/docs/index.html
  * - Large text for tagline.
  * - CTA button linking to the portfolio section.
  * - Centered layout optimized for both mobile and desktop view.
- * 
+ *
  * Author: JaqiKal
  * Date: Dec 2024
  */
@@ -26,33 +27,34 @@ const Hero = () => {
 
   // Configuration for the particle effect
   const particlesOptions = {
-    fpsLimit: 120, // Limits the frame rate for performance
+    fpsLimit: 60, // Limits the frame rate for performance
     fullScreen: { enable: false }, // Disables fullscreen to confine particles to the Hero section
     particles: {
       number: {
-        value: 3, // Total number of particles on the screen
+        value: 200, // Total number of particles on the screen
       },
       shape: {
-        type: "circle", 
+        type: "circle", // Shape of particles
       },
       opacity: {
-        value: 0.5, // Base opacity of particles
+        random: true, // Enables random opacity
+        value: { min: 0.1, max: 0.5 }, // Opacity range for particles
       },
       size: {
-        value: { min: 20, max: 200 },  // Base size of particles
+        value: { min: 10, max: 150 }, // Base size of particles
         random: {
           enable: true, // Enables random sizing
-          minimumValue: 200, // Sets a minimum size for randomness
+         
         },
       },
       move: {
-        enable: true, 
-        speed: 2.5, // Speed of particles
-        direction: "top-right", // Direction of movement
+        enable: true,
+        speed: 2, // Speed of particles
+        direction: "none", // Direction of movement
         outModes: {
           default: "out", // Particles disappear when they leave the canvas
-          top: "destroy", // Particles are removed as they reach the top
-          bottom: "none", // No particles are created at the bottom
+          top: "bounce", // Particles are removed as they reach the top
+          bottom: "none", // Particles are removed as they reach the bottom
         },
       },
     },
@@ -63,7 +65,22 @@ const Hero = () => {
       },
     },
     style: {
-      filter: "blur(50px)", // Adds a blur effect to the entire canvas
+      filter: "blur(60px)", // Adds a blur effect to the entire canvas
+    },
+    emitters: {
+      direction: "top-right", // Emitter shoots particles in set direction
+      position: {
+        x: 30, // Position on the X-axis (slightly off-center)
+        y: 150,
+      },
+      rate: {
+        delay: 0.6, // Delay between emissions
+        quantity: 6, // Number of particles emitted at once
+      },
+      size: {
+        width: 25, // Emitter width
+        height: 10, // Flat emitter (no height)
+      },
     },
     detectRetina: true, // Optimizes for retina screens
     themes: [
@@ -80,7 +97,7 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#9FE2BF", "#FFF0F5", "#10011d"], // Pastel palette for particles 
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // , Pastel palette for particles
             },
           },
         },
@@ -97,27 +114,12 @@ const Hero = () => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#9FE2BF", "#FFF0F5", "#10011d"], // Same palette, ensuring consistent design
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d", "#FFF0F5", "#9FE2BF"], // Same palette, ensuring consistent design
             },
           },
         },
       },
     ],
-    emitters: {
-      direction: "diagonal", // Emitter shoots particles in set direction
-      position: {
-        x: 35, // Position on the X-axis (slightly off-center)
-        y: 150, // Position on the Y-axis
-      },
-      rate: {
-        delay: 0.2, // Delay between emissions
-        quantity: 5 // Number of particles emitted at once
-      },
-      size: {
-        width: 100, // Emitter width
-        height: 0, // Flat emitter (no height)
-      },
-    },
   };
 
   return (
@@ -131,9 +133,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative text-center z-10">
         <h1 className="text-4xl md:text-6xl font-bold text-fuchsia-900">Welcome to my Portfolio</h1>
-        <p className="mt-6 text-lg md:text-xl  text-fuchsia-900">
-          I'm a junior web developer building solutions with precision and passion.
-        </p>
+        <p className="mt-6 text-lg md:text-xl  text-fuchsia-900">I'm a junior web developer building solutions with precision and passion.</p>
         <a
           href="#portfolio" // Links to the portfolio section
           className="mt-6 inline-block px-6 py-3 bg-purple-gradient font-semibold text-purple-950 rounded-md hover:scale-105 transform transition-transform  hover:bg-fuchsia-800"

@@ -1,0 +1,143 @@
+<!-- markdownlint-disable MD007 MD030 -->
+# An overview of the properties&values options for tsParticles, for details go to [tsParticles api docs](https://particles.js.org/docs/index.html)
+
+----------
+
+## **1. Number**
+
+-   **`value`**: Specifies the total number of particles.
+-   **`density`**: Adjusts particle density across the canvas based on a defined area.
+    -   **`enable`**: Enables or disables density-based distribution.
+    -   **`area`**: The area in pixels used for density calculations.
+    -   **`factor`**: A scaling factor for density distribution.
+
+----------
+
+## **2. Shape**
+
+-   **`type`**: Sets the particle shape. Options include:
+    -   `"circle"`, `"square"`, `"image"`, `"polygon"`, etc.
+-   **`options`**:
+    -   For `polygon`, use **`sides`** to define the number of sides.
+    -   For `image`, use:
+        -   **`src`**: URL for the image.
+        -   **`width`** and **`height`**: Dimensions of the image.
+
+----------
+
+## **3. Opacity**
+
+-   **`value`**: Sets the base opacity of the particles.
+-   **`random`**:
+    -   **`enable`**: Enables random opacity for particles.
+    -   **`minimumValue`**: Minimum opacity value when randomization is active.
+-   **`animation`**:
+    -   **`enable`**: Activates opacity animation.
+    -   **`speed`**: Determines animation speed.
+    -   **`minimumValue`**: Minimum opacity during animation.
+    -   **`sync`**: Synchronizes animation across all particles when `true`.
+
+----------
+
+## **4. Size**
+
+-   **`value`**: Sets the size range for particles, e.g., `{ "min": 10, "max": 20 }`.
+-   **`random`**:
+    -   **`enable`**: Enables random sizing for particles.
+    -   **`minimumValue`**: Minimum particle size when randomization is active.
+-   **`animation`**:
+    -   **`enable`**: Activates size animation.
+    -   **`speed`**: Defines the speed of size change.
+    -   **`minimumValue`**: Minimum particle size during animation.
+    -   **`sync`**: Synchronizes size animation across particles when `true`.
+
+----------
+
+## **5. Move**
+
+-   **`enable`**: Activates particle movement when set to `true`.
+-   **`speed`**: Determines how fast the particles move.
+-   **`direction`**: Sets the direction of particle movement; options include:
+    -   `"none"`, `"top"`, `"top-right"`, `"right"`, `"bottom-right"`, `"bottom"`, `"bottom-left"`, `"left"`, and `"top-left"`.
+-   **`outModes`**:
+    -   **`default`**: Defines behavior for all canvas edges unless overridden:
+        -   `"out"`: Particles reappear from the opposite side.
+        -   `"destroy"`: Particles are removed.
+        -   `"bounce"`: Particles bounce back into the canvas.
+        -   `"none"`: Particles stop at the edge.
+    -   Edge-specific options (`top`, `bottom`, etc.) override the `default` behavior.
+-   **`random`**: Enables random movement paths for particles.
+-   **`straight`**: Moves particles in straight lines when set to `true`.
+-   **`attract`**:
+    -   **`enable`**: Activates attraction between particles.
+    -   **`rotateX`** and **`rotateY`**: Define the attraction strength along the X and Y axes.
+
+----------
+
+## **6. Style**
+
+Defines styles applied to the particle canvas.
+
+-   **`filter`**: Applies CSS filters to the canvas (e.g., blur, grayscale).
+    -   Example: `"blur(10px)"`, `"brightness(1.2)"`.
+-   **`zIndex`**: Sets the z-index of the canvas.
+-   **`background`**: Configures the canvas background.
+    -   **`color`**: Background color.
+    -   **`image`**: URL of the background image.
+    -   **`position`**: CSS background position.
+    -   **`size`**: CSS background size (e.g., `cover`, `contain`).
+    -   **`repeat`**: Background repeat settings (`no-repeat`, `repeat`).
+
+Example:
+
+```json
+`"style": {
+  "filter": "blur(5px)",
+  "background": {
+    "color": "#000",
+    "image": "url(https://example.com/bg.jpg)",
+    "position": "center",
+    "size": "cover",
+    "repeat": "no-repeat"
+  }
+}
+```
+
+----------
+
+## **7. Emitter**
+
+Configures particle emitters, which control where and how particles are generated.
+
+-   **`direction`**: Sets the direction of emitted particles.
+    -   Options: `"none"`, `"top"`, `"top-right"`, `"right"`, `"bottom-right"`, `"bottom"`, `"bottom-left"`, `"left"`, `"top-left"`.
+-   **`position`**: Specifies the position of the emitter.
+    -   **`x`**: Horizontal position in percentage or pixels (e.g., `50`, `100px`).
+    -   **`y`**: Vertical position in percentage or pixels (e.g., `50`, `200px`).
+-   **`rate`**: Defines the emission rate.
+    -   **`delay`**: Delay between emissions (in seconds).
+    -   **`quantity`**: Number of particles emitted per cycle.
+-   **`size`**: Specifies the size of the emission area.
+    -   **`width`**: Width of the emitter.
+    -   **`height`**: Height of the emitter.
+
+Example:
+
+```json
+"emitters": {
+  "direction": "top-right",
+  "position": {
+    "x": 50,
+    "y": 100
+  },
+  "rate": {
+    "delay": 0.5,
+    "quantity": 10
+  },
+  "size": {
+    "width": 100,
+    "height": 50
+  }
+}
+```
+<!-- markdownlint-enable MD007 MD030 -->

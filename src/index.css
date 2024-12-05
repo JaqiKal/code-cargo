@@ -1,3 +1,16 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Utilities and Overrides */
+@layer utilities {
+  .bg-gradient-hero {
+    background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  } /* Required as the gradient isn't generated properly via tailwind.config.js */
+}
+
+/* Custom Global Styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -11,23 +24,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  .bg-gradient-hero {
-    background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  } /* Required as the gradient isn't generated properly via tailwind.config.js */
-}
-
-/* Tailwind CSS */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom style */
-
+/* Custom Component Styles */
 #tsparticles {
   position: absolute;
   top: 0;

@@ -148,6 +148,7 @@ dist
 .env.test.local
 .env.production.local
 README-init-at-react-setup.md
+README-tsParticles-properties-values.md
 output.css
 
 
