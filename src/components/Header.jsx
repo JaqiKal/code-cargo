@@ -1,15 +1,16 @@
 /**
- * Header  Component
+ * Header Component
  *
- * This component displays the navigation bar, including my name and
- * links to different sections of the portfolio.
+ * This component displays the navigation bar, including the user's logo 
+ * and links to different sections of the portfolio.
  *
  * Features:
- * - Fixed at the top of the page (sticky).
+ * - Fixed at the top of the page (sticky behavior).
  * - Disappears on scroll down and reappears on scroll up for better visibility.
- * - Responsive navigation with links to different sections of the portfolio.
- * - Hidden name for screen readers.
- * - Utilizes React state and scroll events to manage visibility dynamically.
+ * - Responsive navigation with links to portfolio sections.
+ * - Hidden name for screen readers (accessibility-friendly).
+ * - Calls the `onLogoClick` prop when the logo or "home" link is clicked, 
+ *   allowing parent components to control state (e.g., disable animations).
  *
  * Author: JaqiKal
  * Date: Nov 2024

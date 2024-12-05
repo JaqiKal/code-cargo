@@ -1,3 +1,20 @@
+/**
+ * App Component
+ *
+ * The main entry point of the portfolio application.
+ *
+ * Features:
+ * - Manages global state to control animation in the `Hero` component.
+ * - Passes the `onLogoClick` function to the `Header` component to stop 
+ *   animations when the user navigates back to the home section.
+ * - Renders all major sections of the portfolio: `Header`, `Hero`, `About`, 
+ *   `Portfolio`, and `Contact`.
+ *
+ * Author: JaqiKal
+ * Date: Nov 2024
+ */
+
+
 import React, { useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";

@@ -1,20 +1,21 @@
 /**
  * Hero Component
  *
- * This component serves as the introductory section of the portfolio.
+ * This component serves as the introductory section of the portfolio, 
+ * providing a welcoming message and call-to-action (CTA) button.
  *
  * Features:
- * - Animated particle effect scoped to this section.
- * - Large text for tagline.
- * - CTA button linking to the portfolio section.
- * - Centered layout optimized for both mobile and desktop view.
- * - Animated CTA container.
- * - Animation controlled by parent (`playAnimation` prop).
- * - No internal state for animation.
+ * - Animated particle effect scoped to this section using `react-tsparticles`.
+ * - Large text for the main tagline.
+ * - A customizable CTA button linking to the portfolio section.
+ * - Animated entry for the glass-pane container (controlled via props).
+ * - Animation state is controlled externally using the `playAnimation` prop.
+ * - Optimized for both desktop and mobile views.
  *
  * Author: JaqiKal
  * Date: Dec 2024
  */
+
 
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
