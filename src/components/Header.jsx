@@ -30,7 +30,6 @@
 
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.webp";
-import styles from "./../styles/Header.module.css";
 
 const Header = ({ onLogoClick }) => {
   const [showNav, setShowNav] = useState(true);
@@ -40,16 +39,11 @@ const Header = ({ onLogoClick }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setShowNav(false); // Hide navbar when scrolling down
-      } else {
-        setShowNav(true); // Show navbar when scrolling up
-      }
+      setShowNav(currentScrollY <= lastScrollY || currentScrollY <= 50);
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
@@ -57,50 +51,47 @@ const Header = ({ onLogoClick }) => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className={`${showNav ? "translate-y-0" : "-translate-y-full"} bg-transparent text-white p-4 sticky top-0 z-50 shadow-custom-colored backdrop-blur-sm transition-transform duration-300`}>
+    <header className={`${showNav ? "translate-y-0" : "-translate-y-full"} bg-transparent text-white p-4 sticky top-0 z-50 transition-transform duration-300 backdrop-blur-sm shadow-md`}>
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-3">
-          <a
-            href="/"
-            onClick={(e) => {
-              e.preventDefault();
-              onLogoClick();
-              document.getElementById("hero-section").scrollIntoView({ behavior: "smooth" });
-            }}
-            aria-label="Go to homepage"
-            className="group"
-          >
-            <img src={logo} alt="Logo" className="rounded-full h-14 w-14 transform transition-transform duration-300 ease-in-out group-hover:animate-tilt" />
-          </a>
-          <h1 className="sr-only">Jaqi</h1>
-        </div>
+        {/* Logo Section */}
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            onLogoClick();
+            document.getElementById("hero-section").scrollIntoView({ behavior: "smooth" });
+          }}
+          aria-label="Go to homepage"
+        >
+          <img src={logo} alt="Logo" className="h-14 w-14 rounded-full" />
+        </a>
 
         {/* Hamburger Menu Button */}
-        <button onClick={toggleMenu} className="block md:hidden text-fuchsia-800 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded={menuOpen}>
-          <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+        <button onClick={toggleMenu} className="md:hidden text-fuchsia-800 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded={menuOpen}>
+          <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none">
             <path stroke="currentColor" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
 
         {/* Navigation Links */}
         <nav
-          className={`${menuOpen ? "block opacity-100" : "hidden opacity-0"} md:block absolute md:relative top-full right-0 w-3/4 md:w-auto ${
-            styles["bg-nav-mobile"]
-          } md:bg-transparent transition-all duration-300 ease-in-out z-40 shadow-md md:shadow-none`}
+          className={`absolute top-full right-0 w-full md:w-auto md:static ${
+            menuOpen ? "block bg-fuchsia-200 bg-opacity-80 backdrop-blur-lg shadow-lg" : "hidden"
+          } md:bg-transparent md:border-none md:shadow-none md:rounded-none transition-all duration-300 ease-in-out z-40`}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-4">
+          <ul className="flex flex-row items-center justify-center space-x-6 p-4">
             <li>
-              <a href="#about" className="block py-2 px-4 font-concert p-2 text-fuchsia-800 hover:text-slate-950">
+              <a href="#about" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 About
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="block py-2 px-4 font-concert p-2 text-fuchsia-800 hover:text-slate-950">
+              <a href="#portfolio" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 Portfolio
               </a>
             </li>
             <li>
-              <a href="#contact" className="block py-2 px-4 font-concert p-2 text-fuchsia-800 hover:text-slate-950">
+              <a href="#contact" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 Contact
               </a>
             </li>
