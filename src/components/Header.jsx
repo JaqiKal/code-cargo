@@ -36,6 +36,7 @@ const Header = ({ onLogoClick }) => {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +51,15 @@ const Header = ({ onLogoClick }) => {
 
   // Toggle mobile menu
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // Handle link click to fade out the menu
+  const handleLinkClick = () => {
+    setFadeOut(true);
+    setTimeout(() => {
+      setMenuOpen(false);
+      setFadeOut(false); // Reset fade-out state after closing
+    }, 500); // 500ms to match the CSS transition duration
+  };
 
   return (
     <header className={`${showNav ? "translate-y-0" : "-translate-y-full"} bg-transparent text-white p-4 sticky top-0 z-50 transition-transform duration-300 backdrop-blur-sm shadow-md`}>
@@ -77,10 +87,10 @@ const Header = ({ onLogoClick }) => {
         {/* Navigation Links */}
         <nav
           className={`absolute top-full right-0 w-full md:w-auto md:static ${
-            menuOpen ? "block bg-fuchsia-200 bg-opacity-80 backdrop-blur-lg shadow-lg" : "hidden"
+            menuOpen ? `block bg-fuchsia-200 bg-opacity-80 backdrop-blur-lg shadow-lg ${fadeOut ? "fade-out" : ""}` : "hidden"
           } md:bg-transparent md:border-none md:shadow-none md:rounded-none transition-all duration-300 ease-in-out z-40`}
         >
-          <ul className="nav-links flex flex-row items-center justify-center gap-6 p-4 md:p-0">
+          <ul className="nav-links flex flex-row items-center justify-center gap-6 p-4 md:p-0" onClick={handleLinkClick}>
             <li>
               <a href="#about" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 About

@@ -71,6 +71,12 @@ code {
   font-size: 1.2rem;
 }
 
+/* Fade-out effect for the navigation pane */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 /* TODO  - Media Queries */
 
 /* Header.css */
