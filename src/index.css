@@ -65,9 +65,10 @@ code {
   z-index: 1; /* Ensure it's behind the content */
 }
 
+/* Custom Navbar font */
 .font-concert {
   font-family: "Concert One", cursive;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 /* TODO  - Media Queries */
@@ -88,10 +89,10 @@ code {
 
 /* Medium screens *
 @media (min-width: 640px) and (max-width: 767px) {
-  #tsparticles {
+  /*#tsparticles {
     transform: scale(0.9);
   }
-}
+  */
 
 /* Large screens *
 @media (min-width: 768px) and (max-width: 1023px) {
