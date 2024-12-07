@@ -1,5 +1,5 @@
 /* Hero.module.css */
-/* Customizations specific to the Portfolio project */
+/* Customized effects specific to the Portfolio project */
 
 /* Glass Pane styling */
 .glassPane {
@@ -9,7 +9,7 @@
   align-items: center;
   text-align: center;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
   width: 90%;
   height: auto;
   background: rgba(255, 255, 255, 0.185);
@@ -17,9 +17,10 @@
   backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 10px rgba(16, 1, 29, 0.8);
-  padding: 2rem;
+  padding: 1rem 1rem;
   border-radius: 1rem;
   z-index: 1;
+  transform: translateY(-3rem); /* Move the glass pane up */
 }
 
 /* CTA Button styling */
@@ -63,19 +64,17 @@
 /*  Media Queries */
 @media (max-width: 480px) {
   .glassPane {
-    margin: 1rem auto;
-    padding: 1rem;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 0.5rem;
+    transform: translateY(-2rem);
   }
 
   @media (max-width: 768px) {
     .glassPane {
-      margin: 1rem auto;
-      padding: 1.5rem;
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px);
+      transform: translateY(-2rem);
     }
   }
 }
