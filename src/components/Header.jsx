@@ -87,22 +87,22 @@ const Header = ({ onLogoClick }) => {
         {/* Navigation Links */}
         <nav
           className={`absolute top-full right-0 w-full md:w-auto md:static ${
-            menuOpen ? `block bg-fuchsia-200 bg-opacity-80 backdrop-blur-lg shadow-lg ${fadeOut ? "fade-out" : ""}` : "hidden"
+            menuOpen ? `block bg-fuchsia-200 bg-opacity-80 backdrop-blur-lg shadow-lg ${fadeOut ? "fade-out" : ""}` : "hidden md:flex"
           } md:bg-transparent md:border-none md:shadow-none md:rounded-none transition-all duration-300 ease-in-out z-40`}
         >
           <ul className="nav-links flex flex-row items-center justify-center gap-6 p-4 md:p-0" onClick={handleLinkClick}>
             <li>
-              <a href="#about" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
+              <a href="#about" className="block py-2 px-4 text-xl md:text-2xl font-semibold text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 About
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
+              <a href="#portfolio" className="block py-2 px-4 text-xl md:text-2xl font-semibold text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 Portfolio
               </a>
             </li>
             <li>
-              <a href="#contact" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
+              <a href="#contact" className="block py-2 px-4 text-xl md:text-2xl font-semibold text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 Contact
               </a>
             </li>
