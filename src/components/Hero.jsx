@@ -1,7 +1,7 @@
 /**
  * Hero Component
  *
- * This component serves as the introductory section of the portfolio, 
+ * This component serves as the introductory section of the portfolio,
  * providing a welcoming message and call-to-action (CTA) button.
  *
  * Features:
@@ -15,7 +15,6 @@
  * Author: JaqiKal
  * Date: Dec 2024
  */
-
 
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
@@ -99,7 +98,7 @@ const Hero = ({ playAnimation }) => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], //  TODO "#FFF0F5", "#9FE2BF"Palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], //  Palette for particles
             },
           },
         },
@@ -116,7 +115,7 @@ const Hero = ({ playAnimation }) => {
           },
           particles: {
             color: {
-              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], // TODO "#FFF0F5" "#9FE2BF" Palette for particles
+              value: ["#C8A2C8", "#98FB98", "#CCCCFF", "#10011d"], // Palette for particles
             },
           },
         },
@@ -125,24 +124,22 @@ const Hero = ({ playAnimation }) => {
   };
 
   return (
-  
-  <section className="h-screen flex items-center justify-center bg-gradient-hero" id="hero-section">
-    <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
-    <div className={`relative text-center z-10 ${playAnimation ? styles["hero-flip-animation"] : ""}`}>
-      <div className={styles.glassPane}>
-        <h1 className="text-3xl md:text-5xl font-medium text-heroTextcolor">Welcome to my Portfolio</h1>
-        <p className="mt-6 text-lg md:text-xl text-heroTextcolor">
-          I'm a junior web developer building solutions with precision and passion.
-          </p>
-          <MetallicButton
-          label="View My Work"
-          link="#portfolio"
-          gradientClass="bg-purple-gradient"
-          customClass={`mt-6 text-heroTextcolor ${styles["hero-cta"]}`}
-          />
+    <section className="h-screen flex items-center justify-center bg-gradient-hero" id="hero-section">
+      <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+      <div className={`relative text-center z-10 ${playAnimation ? styles["hero-flip-animation"] : ""}`}>
+        <div className={styles.glassPane}>
+          <h1 className="text-3xl md:text-5xl font-medium text-heroTextcolor">Welcome to my Portfolio</h1>
+          <p className="mt-6 text-lg md:text-xl text-heroTextcolor">As a growing full-stack developer, I’m passionate about building solutions that combine performance and aesthetics. My learning is fueled by listening, doing, and creating.</p>
+
+          {/* Button Container */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-6 w-full">
+            <MetallicButton label="View My Work" link="#portfolio" gradientClass="bg-purple-gradient" customClass={`text-heroTextcolor ${styles["hero-cta-btn"]}`} />
+
+            <MetallicButton label="Hire Me" link="#contact" gradientClass="bg-green-gradient" customClass={`text-heroTextcolor ${styles["hero-cta-btn"]}`} />
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 

@@ -150,6 +150,7 @@ dist
 README-init-at-react-setup.md
 README-tsParticles-properties-values.md
 output.css
+src/styles/TextStyles.module.css   # TODO decide to use or not, remove if not
 
 
 npm-debug.log*

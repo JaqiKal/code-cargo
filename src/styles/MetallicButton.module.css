@@ -12,10 +12,10 @@
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-  color: black;
+  color: #10011d;
   transition: transform 0.2s, box-shadow 0.2s;
   min-height: 2rem;
+  box-shadow: 0 4px 10px rgba(16, 1, 29, 0.4);
 }
 
 .metallic-btn:hover {
@@ -47,6 +47,10 @@
 }
 
 /* Gradient Variants */
+.bg-green-gradient {
+  background: linear-gradient(135deg, #4caf50 0%, #81c784 25%, #388e3c 50%, #81c784 75%, #4caf50 100%);
+}
+
 .bg-silver-gradient {
   background: linear-gradient(135deg, #bfc1c2 0%, #e7e9ec 25%, #f7f7f8 50%, #e7e9ec 75%, #bfc1c2 100%);
 }
@@ -64,8 +68,9 @@
 }
 
 .hero-cta {
-  max-width: 16rem; /* Maximum width */
-  width: 100%; /* Stretch to fill available space */
+  min-width: 12rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .hero-cta {
