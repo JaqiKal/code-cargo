@@ -30,6 +30,7 @@
 
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.webp";
+import "./../index.css";
 
 const Header = ({ onLogoClick }) => {
   const [showNav, setShowNav] = useState(true);
@@ -79,7 +80,7 @@ const Header = ({ onLogoClick }) => {
             menuOpen ? "block bg-fuchsia-200 bg-opacity-80 backdrop-blur-lg shadow-lg" : "hidden"
           } md:bg-transparent md:border-none md:shadow-none md:rounded-none transition-all duration-300 ease-in-out z-40`}
         >
-          <ul className="flex flex-row items-center justify-center space-x-6 p-4">
+          <ul className="nav-links flex flex-row items-center justify-center gap-6 p-4 md:p-0">
             <li>
               <a href="#about" className="block py-2 px-4 font-concert text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
                 About
