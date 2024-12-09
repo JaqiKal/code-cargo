@@ -1,0 +1,18 @@
+/* About.module.css */
+/* Customized effects specific to the Portfolio project */
+
+/* Logo tilt animation */
+@keyframes tilt {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Hover effect for tilt */
+.hover-tilt:hover {
+  animation: tilt 2s ease-in-out 300;
+}

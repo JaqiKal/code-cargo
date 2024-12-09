@@ -19,7 +19,8 @@
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import styles from "./../styles/MetallicButton.module.css";
+import heroStyles from "../styles/Hero.module.css";
+import buttonStyles from "./../styles/MetallicButton.module.css";
 import MetallicButton from "../components/MetallicButton";
 
 const Hero = ({ playAnimation }) => {
@@ -126,16 +127,16 @@ const Hero = ({ playAnimation }) => {
   return (
     <section className="h-screen flex items-center justify-center bg-gradient-hero" id="hero-section">
       <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
-      <div className={`relative text-center z-10 ${playAnimation ? styles["hero-flip-animation"] : ""}`}>
-        <div className={styles.glassPane}>
+      <div className={`relative text-center z-10 ${playAnimation ? heroStyles["hero-flip-animation"] : ""}`}>
+        <div className={heroStyles.glassPane}>
           <h1 className="text-3xl md:text-5xl md:my-6 font-medium text-heroTextcolor">Welcome to my Portfolio</h1>
           <p className="mt-6 text-lg md:text-xl text-heroTextcolor">As a growing full-stack developer, I’m passionate about building solutions that combine performance and aesthetics. My learning is fueled by listening, doing, and creating.</p>
 
           {/* Button Container */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 my-4 md:my-8 w-full">
-            <MetallicButton label="View My Work" link="#portfolio" gradientClass="bg-purple-gradient" customClass={`text-heroTextcolor ${styles["cta-btn"]}`} />
+            <MetallicButton label="View My Work" link="#portfolio" gradientClass="bg-purple-gradient" customClass={`text-heroTextcolor ${buttonStyles["cta-btn"]}`} />
 
-            <MetallicButton label="Hire Me" link="#contact" gradientClass="bg-green-gradient" customClass={`text-heroTextcolor ${styles["cta-btn"]}`} />
+            <MetallicButton label="Hire Me" link="#contact" gradientClass="bg-green-gradient" customClass={`text-heroTextcolor ${buttonStyles["cta-btn"]}`} />
           </div>
         </div>
       </div>

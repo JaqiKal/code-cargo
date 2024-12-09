@@ -11,18 +11,14 @@ module.exports = {
     extend: {
       colors: {
         heroTextcolor: '#10011d', // Dark purple for hero paragraph
+        skillaTextcolor: 'rgba(16, 1, 29, 1);', // Dark purple for skills
+        skillbTextcolor: 'rgba(16, 1, 29, 0.7);',
+        aboutDividercolor: 'rgba(16, 1, 29, 0.3);'
+
       },
       backgroundImage: {
         'bg-gradient-hero':'radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)',
-      },
-      animation: {
-        'tilt': 'tilt 0.5s ease-in-out infinite', // Custom animation for tilting
-      },
-      keyframes: {
-        tilt: {
-          '0%, 100%': { transform: 'rotate(-5deg)' }, // Start and end with slight left tilt
-          '50%': { transform: 'rotate(5deg)' }, // Middle of the animation tilts right
-        },
+     
       },
     },
   },
