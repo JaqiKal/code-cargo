@@ -59,11 +59,12 @@ const skills = [
   },
 ];
 
+// SkillBar Component
 const SkillBar = ({ name, level }) => {
   return (
     <div className="mb-6">
       <div className="flex justify-between mb-1">
-        <span className="text-lg font-medium text-skillbTextcolor">{name}</span>
+        <span className="text-lg font-medium text-skillaTextcolor">{name}</span>
         <span className="text-sm font-medium text-skillbTextcolor">{level}%</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
@@ -80,12 +81,14 @@ const About = () => {
         <h2 className="hidden text-4xl font-bold text-center text-skillTextcolor">About Me</h2>
 
         <div className="flex flex-col lg:flex-row lg:gap-20">
-          {/* Bio */}
+          {/* Bio Section */}
           <div className="lg:w-1/2 mb-12 lg:mb-0">
             <div className="md:mx-24">
               <div className="flex items-center mb-8 flex-col md:flex-row">
-                <img src={logo} alt="Profile" className={`h-28 w-28 rounded-full shadow-lg ${aboutStyles["hover-tilt"]}`} />
-                <h2 className="text-3xl font-bold text-skillTextcolor ml-6">Who am I?</h2>
+                <a href="#hero-section" aria-label="Back to Hero Section">
+                  <img src={logo} alt="Profile Logo" className={`h-28 w-28 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 ${aboutStyles["hover-tilt"]}`} />
+                </a>
+                <h2 className="text-3xl font-bold text-gray-800 ml-6">Who am I?</h2>
               </div>
 
               <p className="text-lg leading-relaxed text-center lg:text-left mb-6">
@@ -102,6 +105,7 @@ const About = () => {
                 optimized to ensure seamless operations.
               </p>
 
+              {/* Call-to-Action Buttons */}
               <div className="border-t border-aboutDividercolor pt-6">
                 <h3 className="text-xl font-semibold text-skillTextcolor mb-2">Currently Practicing</h3>
                 <p className="text-lg mb-4">React, Tailwind, REST APIs, and Figma.</p>
@@ -110,7 +114,6 @@ const About = () => {
                 <p className="text-lg">UX/UI design, SEO, JavaScript, big data analysis, and exploring the intricacies of Supply Chain Management.</p>
               </div>
 
-              {/* Button Container */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-16 mt-8 w-full">
                 <MetallicButton label="View My Work" link="#portfolio" gradientClass="bg-purple-gradient" customClass={`text-skillTextcolor ${styles["cta-btn"]}`} />
                 <MetallicButton label="Hire Me" link="#contact" gradientClass="bg-green-gradient" customClass={`text-skillTextcolor ${styles["cta-btn"]}`} />
@@ -118,12 +121,12 @@ const About = () => {
             </div>
           </div>
 
-          {/* Skills */}
+          {/* Skills Section */}
           <div className="lg:w-1/2 grid grid-cols-1 gap-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
               {skills.map((skillCategory, index) => (
                 <div key={index}>
-                  <h4 className="text-2xl font-semibold text-skillaTextcolor mb-4">{skillCategory.category}</h4>
+                  <h4 className="text-2xl font-semibold text-skillTextcolor mb-4">{skillCategory.category}</h4>
                   {skillCategory.items.map((skill, idx) => (
                     <SkillBar key={idx} name={skill.name} level={skill.level} />
                   ))}

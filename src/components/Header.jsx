@@ -63,7 +63,9 @@ const Header = ({ onLogoClick }) => {
   return (
     <header className={`${showNav ? "translate-y-0" : "-translate-y-full"} bg-transparent text-white p-4 sticky top-0 z-50 transition-transform duration-300 backdrop-blur-2xl shadow-md`}>
       <div className="container mx-auto flex justify-between items-center">
-        <p className="block py-2 px-1 text-xl md:text-2xl font-semibold text-heroTextcolor hover:text-slate-950 transition-transform duration-300 ease-in-out">Jacqueline Kalmár</p>
+        <a href="#hero-section" aria-label="Back to Hero Section">
+          <p className="block py-2 px-1 text-xl md:text-2xl font-semibold text-heroTextcolor hover:text-slate-950 transition-transform duration-300 ease-in-out">Jacqueline Kalmár</p>
+        </a>
 
         {/* Hamburger Menu Button */}
         <button onClick={toggleMenu} className="md:hidden text-fuchsia-800 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded={menuOpen}>
