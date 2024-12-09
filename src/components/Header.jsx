@@ -29,7 +29,6 @@
  */
 
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.webp";
 import "./../index.css";
 
 const Header = ({ onLogoClick }) => {
@@ -62,20 +61,9 @@ const Header = ({ onLogoClick }) => {
   };
 
   return (
-    <header className={`${showNav ? "translate-y-0" : "-translate-y-full"} bg-transparent text-white p-4 sticky top-0 z-50 transition-transform duration-300 backdrop-blur-sm shadow-md`}>
+    <header className={`${showNav ? "translate-y-0" : "-translate-y-full"} bg-transparent text-white p-4 sticky top-0 z-50 transition-transform duration-300 backdrop-blur-2xl shadow-md`}>
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo Section */}
-        <a
-          href="/"
-          onClick={(e) => {
-            e.preventDefault();
-            onLogoClick();
-            document.getElementById("hero-section").scrollIntoView({ behavior: "smooth" });
-          }}
-          aria-label="Go to homepage"
-        >
-          <img src={logo} alt="Logo" className="h-14 w-14 rounded-full" />
-        </a>
+        <p className="block py-2 px-1 text-xl md:text-2xl font-semibold text-heroTextcolor hover:text-slate-950 transition-transform duration-300 ease-in-out">Jacqueline Kalmár</p>
 
         {/* Hamburger Menu Button */}
         <button onClick={toggleMenu} className="md:hidden text-fuchsia-800 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded={menuOpen}>
@@ -92,17 +80,17 @@ const Header = ({ onLogoClick }) => {
         >
           <ul className="nav-links flex flex-row items-center justify-center gap-6 p-4 md:p-0" onClick={handleLinkClick}>
             <li>
-              <a href="#about" className="block py-2 px-1 text-xl md:text-2xl font-semibold text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
+              <a href="#about" className="block py-2 px-1 text-xl md:text-2xl font-semibold  text-heroTextcolor hover:text-fuchsia-800 transition-transform duration-300 ease-in-out">
                 About
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="block py-2 px-1 text-xl md:text-2xl font-semibold text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
+              <a href="#portfolio" className="block py-2 px-1 text-xl md:text-2xl font-semibold  text-heroTextcolor hover:text-fuchsia-800 transition-transform duration-300 ease-in-out">
                 Portfolio
               </a>
             </li>
             <li>
-              <a href="#contact" className="block py-2 px-1 text-xl md:text-2xl font-semibold text-fuchsia-800 hover:text-slate-950 transition-transform duration-300 ease-in-out">
+              <a href="#contact" className="block py-2 px-1 text-xl md:text-2xl font-semibold  text-heroTextcolor hover:text-fuchsia-800 transition-transform duration-300 ease-in-out">
                 Contact
               </a>
             </li>

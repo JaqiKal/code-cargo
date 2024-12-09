@@ -49,6 +49,14 @@
   z-index: 1;
 }
 
+.cta-btn {
+  max-width: 8rem;
+  width: 100%;
+  padding: 0.75rem 1.2rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
 /* Gradient Variants */
 .bg-green-gradient {
   background: linear-gradient(135deg, #4caf50 0%, #81c784 25%, #388e3c 50%, #81c784 75%, #4caf50 100%);
@@ -68,15 +76,4 @@
 
 .bg-mauve-gradient {
   background: linear-gradient(135deg, #9e7d8c 0%, #b898a4 25%, #805e6e 50%, #b898a4 75%, #9e7d8c 100%);
-}
-
-.hero-cta {
-  min-width: 12rem;
-  padding: 0.75rem 1rem;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .hero-cta {
-    max-width: 2rem; /* Adjust width for larger viewports */
-  }
 }

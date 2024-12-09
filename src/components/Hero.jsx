@@ -19,7 +19,7 @@
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import styles from "./../styles/Hero.module.css";
+import styles from "./../styles/MetallicButton.module.css";
 import MetallicButton from "../components/MetallicButton";
 
 const Hero = ({ playAnimation }) => {
@@ -133,9 +133,9 @@ const Hero = ({ playAnimation }) => {
 
           {/* Button Container */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 my-4 md:my-8 w-full">
-            <MetallicButton label="View My Work" link="#portfolio" gradientClass="bg-purple-gradient" customClass={`text-heroTextcolor ${styles["hero-cta-btn"]}`} />
+            <MetallicButton label="View My Work" link="#portfolio" gradientClass="bg-purple-gradient" customClass={`text-heroTextcolor ${styles["cta-btn"]}`} />
 
-            <MetallicButton label="Hire Me" link="#contact" gradientClass="bg-green-gradient" customClass={`text-heroTextcolor ${styles["hero-cta-btn"]}`} />
+            <MetallicButton label="Hire Me" link="#contact" gradientClass="bg-green-gradient" customClass={`text-heroTextcolor ${styles["cta-btn"]}`} />
           </div>
         </div>
       </div>
