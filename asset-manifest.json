@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/code-cargo/static/css/main.af74fa0f.css",
-    "main.js": "/code-cargo/static/js/main.18ed331f.js",
+    "main.css": "/code-cargo/static/css/main.49280496.css",
+    "main.js": "/code-cargo/static/js/main.855d758d.js",
     "static/media/logo-pixavibe.webp": "/code-cargo/static/media/logo-pixavibe.2a431b2dea9178992ead.webp",
     "static/media/logo.webp": "/code-cargo/static/media/logo.c6f5c1c67192abe6694c.webp",
     "index.html": "/code-cargo/index.html",
-    "main.af74fa0f.css.map": "/code-cargo/static/css/main.af74fa0f.css.map",
-    "main.18ed331f.js.map": "/code-cargo/static/js/main.18ed331f.js.map"
+    "main.49280496.css.map": "/code-cargo/static/css/main.49280496.css.map",
+    "main.855d758d.js.map": "/code-cargo/static/js/main.855d758d.js.map"
   },
   "entrypoints": [
-    "static/css/main.af74fa0f.css",
-    "static/js/main.18ed331f.js"
+    "static/css/main.49280496.css",
+    "static/js/main.855d758d.js"
   ]
 }
