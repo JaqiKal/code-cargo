@@ -16,3 +16,17 @@
 .hover-tilt:hover {
   animation: tilt 2s ease-in-out 300;
 }
+
+/* Skill Circle Styling */
+.skill-circle {
+  background: linear-gradient(145deg, #fff7ff, #c7a9ce);
+  border-radius: 50%;
+  box-shadow: 15.32px 15.32px 100px #f4cffd, -15.32px -15.32px 100px #f6d1ff;
+  width: 6.5rem;
+  height: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Includes padding in width and height */
+}
