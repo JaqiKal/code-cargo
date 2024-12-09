@@ -59,21 +59,22 @@ const skills = [
   },
 ];
 
-// SkillBar Component
+// SkillBar Component with Metallic Effect
 const SkillBar = ({ name, level }) => {
   return (
     <div className="mb-6">
       <div className="flex justify-between mb-1">
-        <span className="text-lg font-medium text-skillaTextcolor">{name}</span>
-        <span className="text-sm font-medium text-skillbTextcolor">{level}%</span>
+        <span className="text-lg font-medium text-skillTextcolor">{name}</span>
+        <span className="text-sm font-medium text-skillTextcolor">{level}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
-        <div className="h-4 rounded-full bg-gradient-to-r from-blue-400 to-blue-600" style={{ width: `${level}%` }}></div>
+      <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden relative">
+        <div className="h-4 rounded-full bg-gradient-to-r from-indigo-200 to-indigo-900 shadow-md" style={{ width: `${level}%` }}></div>
+        {/* Shine Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"></div>
       </div>
     </div>
   );
 };
-
 const About = () => {
   return (
     <section id="about" className="pt-10 py-8 w-full bg-fuchsia-200">
@@ -92,17 +93,23 @@ const About = () => {
               </div>
 
               <p className="text-lg leading-relaxed text-center lg:text-left mb-6">
-                As a junior full-stack developer, I approach challenges with a practical mindset and a methodical approach. I value punctuality, clear communication, and thorough documentation, ensuring projects stay organized and on track.
+                As a junior full-stack developer, I tackle challenges with a clear plan and a practical mindset. I value being on time, communicating clearly, and keeping thorough documentation. This helps me keep projects organized and on track.
+              </p>
+
+              <p className="text-lg leading-relaxed text-center lg:text-left mb-6">I work well with others, breaking down complex tasks into simple steps. I focus on creating solutions that are reliable and improve workflow efficiency.</p>
+
+              <p className="text-lg leading-relaxed text-center lg:text-left mb-6">
+                Coming from a different career background, I bring adaptability and a diligent work ethic. My curiosity goes beyond coding - I am deeply fascinated by logistics and Supply Chain Management (SCM). I enjoy finding ways to optimize
+                systems for smoother operations.
               </p>
 
               <p className="text-lg leading-relaxed text-center lg:text-left mb-6">
-                I thrive in collaborative environments, breaking down complex tasks into manageable steps and coordinating effectively with teams. My focus is on creating reliable solutions that not only work well but also improve workflow
-                efficiency.
+                When I'm not coding or spending time with my family, you’ll find me diving into books, dabbling in herbology, or attempting to conquer board games and video games—attempting being the key word. I'm spectacularly bad at them, but I
+                have an absolute blast losing! 😊 I'm also a sci-fi fan, always ready to binge movies and TV series. I love picking up new hobbies and interests, even if they don’t always go according to plan.
               </p>
 
               <p className="text-lg leading-relaxed text-center lg:text-left mb-6">
-                Coming from a different career background, I bring adaptability and a diligent work ethic. My curiosity extends beyond code; I am deeply fascinated by logistics and Supply Chain Management (SCM), appreciating how systems can be
-                optimized to ensure seamless operations.
+                I am currently seeking opportunities to grow my skills and contribute to projects that make a positive impact. I am open to learning new technologies and collaborating with teams to create innovative solutions.
               </p>
 
               {/* Call-to-Action Buttons */}
