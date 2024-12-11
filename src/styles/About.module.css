@@ -3,9 +3,9 @@
 
 /* Define CSS Variables */
 :root {
-  --fuchsia-100:#fae8ff ;
-  --fuchsia-200:#f5d0fe ;
-  --fuchsia-300:#f0abfc ;
+  --fuchsia-100: #fae8ff;
+  --fuchsia-200: #f5d0fe;
+  --fuchsia-300: #f0abfc;
 }
 
 /*
@@ -13,8 +13,6 @@
   --fuchsia-100:#f5d0fe ;
   --fuchsia-300:#f0abfc ;
 */
-
-
 
 /* Logo tilt animation */
 @keyframes tilt {
@@ -36,7 +34,9 @@
 .skill-circle {
   background: linear-gradient(145deg, #fff7ff, #c7a9ce);
   border-radius: 50%;
-  box-shadow: 15.32px 15.32px 100px #f4cffd, -15.32px -15.32px 100px #f6d1ff;
+  box-shadow:
+    15.32px 15.32px 100px #f4cffd,
+    -15.32px -15.32px 100px #f6d1ff;
   width: 6.5rem;
   height: 6.5rem;
   display: flex;
@@ -44,13 +44,28 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box; /* Includes padding in width and height */
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hover effect for skill circle */
 .skill-circle:hover {
   transform: scale(1.1);
   background: var(--fuchsia-200);
-  box-shadow: inset 5px 5px 10px var(--fuchsia-300), inset -5px -5px 15px var(--fuchsia-100);
+  box-shadow:
+    inset 5px 5px 10px var(--fuchsia-300),
+    inset -5px -5px 15px var(--fuchsia-100);
 }
 
+/* Media Query */
+@media (max-width: 300px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
