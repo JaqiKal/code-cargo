@@ -24,46 +24,135 @@ import logo from "../assets/logo.webp";
 import MetallicButton from "../components/MetallicButton";
 import styles from "../styles/MetallicButton.module.css";
 import aboutStyles from "../styles/About.module.css";
+import lucidchartLogo from "../assets/lucidchart-logomark-transp.png";
+import balsamiqLogo from "../assets/balsamiq-logo.png";
+
 
 const skillCategories = [
   {
     title: "Languages",
     skills: [
-      { name: "Python", icon: <i className="devicon-python-plain text-yellow-500 text-4xl"></i> },
-      { name: "JavaScript", icon: <i className="devicon-javascript-plain text-yellow-300 text-4xl"></i> },
-      { name: "HTML5", icon: <i className="devicon-html5-plain text-orange-500 text-4xl"></i> },
-      { name: "CSS3", icon: <i className="devicon-css3-plain text-blue-500 text-4xl"></i> },
+      { 
+        name: "Python", 
+        icon: <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-python-plain text-yellow-500 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "JavaScript", 
+        icon: <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-javascript-plain text-yellow-300 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "HTML5", 
+        icon: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-html5-plain text-orange-500 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "CSS3", 
+        icon: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
+                 <i className="fa-brands fa-css3-alt text-rebecca-purple text-4xl"></i>
+               </a>
+      },
     ],
   },
   {
     title: "Frameworks & Libraries",
     skills: [
-      { name: "Django", icon: <i className="devicon-django-plain text-green-700 text-4xl"></i> },
-      { name: "jQuery", icon: <i className="devicon-jquery-plain text-blue-600 text-4xl"></i> },
-      { name: "Bootstrap", icon: <i className="devicon-bootstrap-plain text-purple-600 text-4xl"></i> },
-      { name: "Tailwind CSS", icon: <i className="devicon-tailwindcss-plain text-blue-400 text-4xl"></i> },
+      { 
+        name: "Django", 
+        icon: <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-django-plain text-green-700 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "jQuery", 
+        icon: <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-jquery-plain text-blue-600 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "Bootstrap", 
+        icon: <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-bootstrap-plain text-purple-600 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "Tailwind CSS", 
+        icon: <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-tailwindcss-plain text-blue-400 text-4xl"></i>
+               </a>
+      },
     ],
   },
   {
     title: "Databases",
     skills: [
-      { name: "SQLite", icon: <i className="devicon-sqlite-plain text-gray-500 text-4xl"></i> },
-      { name: "MySQL", icon: <i className="devicon-mysql-plain text-blue-600 text-4xl"></i> },
-      { name: "MongoDB", icon: <i className="devicon-mongodb-plain text-green-600 text-4xl"></i> },
-      { name: "PostgreSQL", icon: <i className="devicon-postgresql-plain text-indigo-600 text-4xl"></i> },
+      { 
+        name: "SQLite", 
+        icon: <a href="https://sqlite.org" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-sqlite-plain text-gray-500 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "MySQL", 
+        icon: <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-mysql-plain text-blue-600 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "MongoDB", 
+        icon: <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-mongodb-plain text-green-600 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "PostgreSQL", 
+        icon: <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-postgresql-plain text-indigo-600 text-4xl"></i>
+               </a>
+      },
     ],
   },
   {
     title: "Tools & Testing",
     skills: [
-      { name: "Git", icon: <i className="devicon-git-plain text-red-500 text-4xl"></i> },
-      { name: "Jest", icon: <i className="devicon-jest-plain text-pink-500 text-4xl"></i> },
-      { name: "Pytest", icon: <i className="devicon-python-plain text-green-500 text-4xl"></i> },
-      { name: "Balsamiq", icon: <i className="devicon-balsamiq-plain text-gray-700 text-4xl"></i> },
-      { name: "Lucidcharts", icon: <i className="devicon-lucidchart-plain text-orange-400 text-4xl"></i> },
+      { 
+        name: "Git", 
+        icon: <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-git-plain text-red-500 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "Jest", 
+        icon: <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-jest-plain text-pink-500 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "Pytest", 
+        icon: <a href="https://docs.pytest.org/" target="_blank" rel="noopener noreferrer">
+                 <i className="devicon-python-plain text-green-500 text-4xl"></i>
+               </a>
+      },
+      { 
+        name: "Balsamiq", 
+        icon: <a href="https://balsamiq.com/" target="_blank" rel="noopener noreferrer">
+                 <img src={balsamiqLogo} alt="Balsamiq Logo" className="h-8 w-8" />
+               </a>
+      },
+      { 
+        name: "Lucidcharts", 
+        icon: <a href="https://www.lucidchart.com/" target="_blank" rel="noopener noreferrer">
+                 <img src={lucidchartLogo} alt="Lucidcharts Logo" className="h-8 w-8" />
+               </a>
+      },
     ],
   },
 ];
+
 
 const About = () => {
   return (

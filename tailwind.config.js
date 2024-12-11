@@ -10,10 +10,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        heroTextcolor: '#10011d', // Dark purple for hero paragraph
-        skillaTextcolor: 'rgba(16, 1, 29, 1);', // Dark purple for skills
-        skillbTextcolor: 'rgba(16, 1, 29, 0.7);',
-        aboutDividercolor: 'rgba(16, 1, 29, 0.3);'
+        'heroTextcolor': '#10011d', // Dark purple for hero paragraph
+        'skillaTextcolor': 'rgba(16, 1, 29, 1);', // Dark purple for skills
+        'skillbTextcolor': 'rgba(16, 1, 29, 0.7);',
+        'aboutDividercolor': 'rgba(16, 1, 29, 0.3);',
+        'rebecca-purple': 'rgba(102, 51, 153, 1);', // CSS icon color
+
 
       },
       backgroundImage: {

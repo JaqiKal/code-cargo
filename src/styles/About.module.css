@@ -1,6 +1,21 @@
 /* About.module.css */
 /* Customized effects specific to the Portfolio project */
 
+/* Define CSS Variables */
+:root {
+  --fuchsia-100:#fae8ff ;
+  --fuchsia-200:#f5d0fe ;
+  --fuchsia-300:#f0abfc ;
+}
+
+/*
+  --fuchsia-100:#fae8ff ;
+  --fuchsia-100:#f5d0fe ;
+  --fuchsia-300:#f0abfc ;
+*/
+
+
+
 /* Logo tilt animation */
 @keyframes tilt {
   0%,
@@ -29,4 +44,13 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box; /* Includes padding in width and height */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Hover effect for skill circle */
+.skill-circle:hover {
+  transform: scale(1.1);
+  background: var(--fuchsia-200);
+  box-shadow: inset 5px 5px 10px var(--fuchsia-300), inset -5px -5px 15px var(--fuchsia-100);
+}
+
