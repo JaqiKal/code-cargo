@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/code-cargo/static/css/main.e5341331.css",
-    "main.js": "/code-cargo/static/js/main.855d758d.js",
+    "main.css": "/code-cargo/static/css/main.ded3d271.css",
+    "main.js": "/code-cargo/static/js/main.d6eebfac.js",
     "static/media/logo-pixavibe.webp": "/code-cargo/static/media/logo-pixavibe.2a431b2dea9178992ead.webp",
+    "static/media/balsamiq-logo.png": "/code-cargo/static/media/balsamiq-logo.c407d70455986ca3a525.png",
     "static/media/logo.webp": "/code-cargo/static/media/logo.c6f5c1c67192abe6694c.webp",
     "index.html": "/code-cargo/index.html",
-    "main.e5341331.css.map": "/code-cargo/static/css/main.e5341331.css.map",
-    "main.855d758d.js.map": "/code-cargo/static/js/main.855d758d.js.map"
+    "main.ded3d271.css.map": "/code-cargo/static/css/main.ded3d271.css.map",
+    "main.d6eebfac.js.map": "/code-cargo/static/js/main.d6eebfac.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5341331.css",
-    "static/js/main.855d758d.js"
+    "static/css/main.ded3d271.css",
+    "static/js/main.d6eebfac.js"
   ]
 }
