@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/code-cargo/static/css/main.dbb74c82.css",
-    "main.js": "/code-cargo/static/js/main.21fc6979.js",
+    "main.js": "/code-cargo/static/js/main.08c81f0e.js",
     "static/media/logo-pixavibe.webp": "/code-cargo/static/media/logo-pixavibe.2a431b2dea9178992ead.webp",
     "static/media/balsamiq-logo.png": "/code-cargo/static/media/balsamiq-logo.c407d70455986ca3a525.png",
     "static/media/logo.webp": "/code-cargo/static/media/logo.c6f5c1c67192abe6694c.webp",
     "index.html": "/code-cargo/index.html",
     "main.dbb74c82.css.map": "/code-cargo/static/css/main.dbb74c82.css.map",
-    "main.21fc6979.js.map": "/code-cargo/static/js/main.21fc6979.js.map"
+    "main.08c81f0e.js.map": "/code-cargo/static/js/main.08c81f0e.js.map"
   },
   "entrypoints": [
     "static/css/main.dbb74c82.css",
-    "static/js/main.21fc6979.js"
+    "static/js/main.08c81f0e.js"
   ]
 }
