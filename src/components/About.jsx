@@ -68,14 +68,14 @@ const skillCategories = [
         ),
       },
       {
-        name: "CSS3",
+        name: "CSS",
         icon: (
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa-brands fa-css3-alt text-4xl text-rebecca-purple"></i>
+            <i className="fa-brands fa-css text-4xl text-rebecca-purple"></i>
           </a>
         ),
       },
