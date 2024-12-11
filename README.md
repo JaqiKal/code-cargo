@@ -20,6 +20,7 @@ Visit the [Live Site](https://jaqikal.github.io/code-cargo/)
 - **TailwindCSS**: For styling with a utility-first approach.
 - **Node.js**: Backend and serverless functions.
 - **Vercel**: Hosting and deployment.
+- **Prettier with Tailwind Plugin**: Ensures consistent code formatting and Tailwind class sorting.
 
 ## Getting Started
 
