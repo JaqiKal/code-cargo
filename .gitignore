@@ -158,3 +158,6 @@ yarn-error.log*
 
 # Ignore spelling configuration
 .cspell.json
+
+# TODO Temporary ignore
+src/components/Door.jsx

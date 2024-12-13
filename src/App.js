@@ -21,6 +21,7 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
+import Door from "./components/Door";  
 
 const App = () => {
   const [playAnimation, setPlayAnimation] = useState(true);
@@ -35,6 +36,7 @@ const App = () => {
       <About />
       <Portfolio />
       <Contact />
+      <Door />
     </div>
   );
 };

@@ -68,14 +68,14 @@ const skillCategories = [
         ),
       },
       {
-        name: "CSS",
+        name: "CSS3",
         icon: (
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa-brands fa-css text-4xl text-rebecca-purple"></i>
+            <i className="fa-brands fa-css text-rebeccaPurple text-4xl"></i>
           </a>
         ),
       },
@@ -326,13 +326,13 @@ const About = () => {
                 label="View My Work"
                 link="#portfolio"
                 gradientClass="bg-purple-gradient"
-                customClass={`text-skillTextcolor ${styles["cta-btn"]}`}
+                customClass={`text-skillTextColor ${styles["cta-btn"]}`}
               />
               <MetallicButton
                 label="Hire Me"
                 link="#contact"
                 gradientClass="bg-green-gradient"
-                customClass={`text-skillTextcolor ${styles["cta-btn"]}`}
+                customClass={`text-skillTextColor ${styles["cta-btn"]}`}
               />
             </div>
           </div>
@@ -343,11 +343,11 @@ const About = () => {
             {skillCategories.flatMap((category) =>
               category.skills.map((skill, idx) => (
                 <div
-                  key={idx}
+                  key={`${category.title}-${idx}`} // Unique key combining title and index
                   className={`${aboutStyles["skill-circle"]} flex flex-col items-center justify-center`}
                 >
                   {skill.icon}
-                  <span className="mt-2 text-center text-xs font-medium text-skillbTextcolor">
+                  <span className="text-skillbTextColor mt-2 text-center text-xs font-medium">
                     {skill.name}
                   </span>
                 </div>

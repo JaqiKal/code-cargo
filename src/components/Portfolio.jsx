@@ -29,7 +29,7 @@ const Portfolio = () => {
         liveSite: "https://pixavibe-frontend-e53fa907f215.herokuapp.com/",
       },
       customStyles: {
-        headerBg: "bg-[rgb(232,247,229)]", 
+        headerBg: "bg-[rgb(232,247,229)]",
         bodyBg: "bg-[rgb(231,213,230)] text-[rgb(109,57,138)]",
         buttonBg: "bg-[rgb(231,213,230)] text-[rgb(109,57,138)]",
       },
@@ -145,14 +145,14 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-16 px-4 bg-white">
+    <section id="portfolio" className="bg-white px-4 py-16">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <h2 className="mb-8 text-center text-3xl font-bold">My Projects</h2>
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="max-w-sm mx-auto border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border-transparent"
+              className="mx-auto max-w-sm overflow-hidden rounded-lg border border-transparent shadow-md transition-shadow duration-300 hover:shadow-lg"
             >
               {/* Top Section */}
               <div
@@ -166,20 +166,26 @@ const Portfolio = () => {
                     className="max-h-16"
                   />
                 ) : (
-                  <h3 className={project.customStyles?.titleStyle || "text-xl"}>{project.customStyles?.title || project.title}</h3>
+                  <h3 className={project.customStyles?.titleStyle || "text-xl"}>
+                    {project.customStyles?.title || project.title}
+                  </h3>
                 )}
               </div>
 
               {/* Card Body Section */}
-              <div className={`p-4 ${project.customStyles?.bodyBg || "bg-white text-gray-600"}`}>
-                <div className="bg-stone-100 rounded-lg shadow-inner p-4 max-h-40 overflow-y-auto">
+              <div
+                className={`p-4 ${project.customStyles?.bodyBg || "bg-white text-gray-600"}`}
+              >
+                <div className="max-h-40 overflow-y-auto rounded-lg bg-stone-100 p-4 shadow-inner">
                   <p className="text-gray-800">{project.description}</p>
                 </div>
               </div>
 
               {/* Buttons Section */}
-              <div className={`p-4 ${project.customStyles?.buttonBg || "bg-gray-100"}`}>
-                <div className="backdrop-blur-md bg-white/30 border border-white/20 p-4 rounded-lg grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div
+                className={`p-4 ${project.customStyles?.buttonBg || "bg-gray-100"}`}
+              >
+                <div className="grid grid-cols-1 gap-2 rounded-lg border border-white/20 bg-white/30 p-4 backdrop-blur-md sm:grid-cols-3">
                   {project.links.backend && (
                     <MetallicButton
                       label="Backend"

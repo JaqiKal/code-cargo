@@ -16,7 +16,9 @@
   cursor: pointer;
   overflow: hidden;
   color: #10011d;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   min-height: 2rem;
   box-shadow: 0 4px 10px rgba(16, 1, 29, 0.4);
 }
@@ -27,16 +29,22 @@
 }
 
 .metallic-btn .metallic-shine {
-  content: "";
   position: absolute;
   top: 0;
   left: -75%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 75%);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.3) 75%
+  );
   opacity: 0;
   transform: translateX(-100%) rotate(25deg);
-  transition: transform 0.6s, opacity 0.6s;
+  transition:
+    transform 0.6s,
+    opacity 0.6s;
 }
 
 .metallic-btn:hover .metallic-shine {
@@ -59,21 +67,56 @@
 
 /* Gradient Variants */
 .bg-green-gradient {
-  background: linear-gradient(135deg, #4caf50 0%, #81c784 25%, #388e3c 50%, #81c784 75%, #4caf50 100%);
+  background: linear-gradient(
+    135deg,
+    #4caf50 0%,
+    #81c784 25%,
+    #388e3c 50%,
+    #81c784 75%,
+    #4caf50 100%
+  );
 }
 
 .bg-silver-gradient {
-  background: linear-gradient(135deg, #bfc1c2 0%, #e7e9ec 25%, #f7f7f8 50%, #e7e9ec 75%, #bfc1c2 100%);
+  background: linear-gradient(
+    135deg,
+    #bfc1c2 0%,
+    #e7e9ec 25%,
+    #f7f7f8 50%,
+    #e7e9ec 75%,
+    #bfc1c2 100%
+  );
 }
 
 .bg-steelgreen-gradient {
-  background: linear-gradient(135deg, #7c9d8e 0%, #a3b9af 25%, #627f72 50%, #a3b9af 75%, #7c9d8e 100%);
+  background: linear-gradient(
+    135deg,
+    #7c9d8e 0%,
+    #a3b9af 25%,
+    #627f72 50%,
+    #a3b9af 75%,
+    #7c9d8e 100%
+  );
 }
 
 .bg-purple-gradient {
-  background: linear-gradient(135deg, #86198f 0%, #d946ef 25%, #f0abfc 50%, #d946ef 75%, #86198f 100%);
+  background: linear-gradient(
+    135deg,
+    #86198f 0%,
+    #d946ef 25%,
+    #f0abfc 50%,
+    #d946ef 75%,
+    #86198f 100%
+  );
 }
 
 .bg-mauve-gradient {
-  background: linear-gradient(135deg, #9e7d8c 0%, #b898a4 25%, #805e6e 50%, #b898a4 75%, #9e7d8c 100%);
+  background: linear-gradient(
+    135deg,
+    #9e7d8c 0%,
+    #b898a4 25%,
+    #805e6e 50%,
+    #b898a4 75%,
+    #9e7d8c 100%
+  );
 }

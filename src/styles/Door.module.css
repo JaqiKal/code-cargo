@@ -1,0 +1,13 @@
+/* Door.module.css */
+/* Customized effects specific to the Portfolio project */
+
+/* Base door style */
+.doorLeaf {
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
+}
+
+/* Open state: rotate the door 160 degrees along the Y-axis */
+.open {
+  transform: rotateY(-170deg); /* Rotate the door to the left */
+}

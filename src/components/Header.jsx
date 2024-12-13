@@ -61,38 +61,65 @@ const Header = ({ onLogoClick }) => {
   };
 
   return (
-    <header className={`${showNav ? "translate-y-0" : "-translate-y-full"} bg-transparent text-white p-4 sticky top-0 z-50 transition-transform duration-300 backdrop-blur-2xl shadow-md`}>
-      <div className="container mx-auto flex justify-between items-center">
+    <header
+      className={`${showNav ? "translate-y-0" : "-translate-y-full"} sticky top-0 z-50 bg-transparent p-4 text-white shadow-md backdrop-blur-2xl transition-transform duration-300`}
+    >
+      <div className="container mx-auto flex items-center justify-between">
         <a href="#hero-section" aria-label="Back to Hero Section">
-          <p className="block py-2 px-1 text-xl md:text-2xl font-semibold text-heroTextcolor hover:text-slate-950 transition-transform duration-300 ease-in-out">Jacqueline Kalmár</p>
+          <p className="text-heroTextColor block px-1 py-2 text-xl font-semibold transition-transform duration-300 ease-in-out hover:text-slate-950 md:text-2xl">
+            Jacqueline Kalmár
+          </p>
         </a>
 
         {/* Hamburger Menu Button */}
-        <button onClick={toggleMenu} className="md:hidden text-fuchsia-800 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded={menuOpen}>
+        <button
+          onClick={toggleMenu}
+          className="text-fuchsia-800 focus:outline-none md:hidden"
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
           <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none">
-            <path stroke="currentColor" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path
+              stroke="currentColor"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
 
         {/* Navigation Links */}
         <nav
-          className={`absolute top-full right-0 w-full md:w-auto md:static ${
-            menuOpen ? `block bg-fuchsia-300 bg-opacity-95 backdrop-blur-lg shadow-lg ${fadeOut ? "fade-out" : ""}` : "hidden md:flex"
-          } md:bg-transparent md:border-none md:shadow-none md:rounded-none transition-all duration-300 ease-in-out z-40`}
+          className={`absolute right-0 top-full w-full md:static md:w-auto ${
+            menuOpen
+              ? `block bg-fuchsia-300 bg-opacity-95 shadow-lg backdrop-blur-lg ${fadeOut ? "fade-out" : ""}`
+              : "hidden md:flex"
+          } z-40 transition-all duration-300 ease-in-out md:rounded-none md:border-none md:bg-transparent md:shadow-none`}
         >
-          <ul className="nav-links flex flex-row items-center justify-center gap-6 p-4 md:p-0" onClick={handleLinkClick}>
+          <ul
+            className="nav-links flex flex-row items-center justify-center gap-6 p-4 md:p-0"
+            onClick={handleLinkClick}
+          >
             <li>
-              <a href="#about" className="block py-2 px-1 text-xl md:text-2xl font-semibold  text-heroTextcolor hover:text-fuchsia-800 transition-transform duration-300 ease-in-out">
+              <a
+                href="#about"
+                className="text-heroTextColor block px-1 py-2 text-xl font-semibold transition-transform duration-300 ease-in-out hover:text-fuchsia-800 md:text-2xl"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="block py-2 px-1 text-xl md:text-2xl font-semibold  text-heroTextcolor hover:text-fuchsia-800 transition-transform duration-300 ease-in-out">
+              <a
+                href="#portfolio"
+                className="text-heroTextColor block px-1 py-2 text-xl font-semibold transition-transform duration-300 ease-in-out hover:text-fuchsia-800 md:text-2xl"
+              >
                 Portfolio
               </a>
             </li>
             <li>
-              <a href="#contact" className="block py-2 px-1 text-xl md:text-2xl font-semibold  text-heroTextcolor hover:text-fuchsia-800 transition-transform duration-300 ease-in-out">
+              <a
+                href="#contact"
+                className="text-heroTextColor block px-1 py-2 text-xl font-semibold transition-transform duration-300 ease-in-out hover:text-fuchsia-800 md:text-2xl"
+              >
                 Contact
               </a>
             </li>
